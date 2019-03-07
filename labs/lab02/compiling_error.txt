@@ -1,0 +1,7 @@
+/Users/Hun/Desktop/2019-1/DS/Hun_projects/labs/lab02/lab02.cpp:52:44: error: expected expression
+        int list[] = { 3, 4, 1, 7, 9, 6, 5, 2, 8, , 10, -1 };
+                                                  ^
+/Users/Hun/Desktop/2019-1/DS/Hun_projects/labs/lab02/lab02.cpp:53:22: error: invalid application of 'sizeof' to an incomplete type 'int []'
+        const int N = sizeof(list)/sizeof(list[0]);
+                            ^~~~~~
+2 errors generated.
