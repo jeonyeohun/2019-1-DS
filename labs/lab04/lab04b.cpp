@@ -15,17 +15,18 @@ using namespace std;
 int main() {
     // Invoke GetInt() with "Enter total number of students: "
     // your code here
-    int num = 3;
+    int num;
+    string prompt = "Enter quiz scores of students.";
     double *ptr = new double[num];  // allocating num number of doubles
 
-    cout << "Enter quiz scores of students." << endl;
+    //cout << "Enter quiz scores of students." << endl;
     for (int i = 0; i < num; ++i) {
-      // your code here
+      ptr[i] = GetInt();
     }
 
     cout << "\nDisplaying scores of students." << endl;
     for (int i = 0; i < num; ++i)
-        // your code here
+        cout << ptr[i] << endl;
 
     delete [] ptr;   // ptr memory is released
     cout << "Happy Coding~~\n";

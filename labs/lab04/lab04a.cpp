@@ -1,5 +1,5 @@
 // C++ for C Coders & Data Structures
-// Lecture note by idebtor@gmail.com 
+// Lecture note by idebtor@gmail.com
 //
 // Lab04 - Using new and delete operators
 // Write a C++ Program to store quiz score of n number of students
@@ -17,15 +17,15 @@ int main() {
 
     cout << "Enter quiz scores of students." << endl;
     for (int i = 0; i < num; ++i) {
-        // your code here
+      cin >> ptr[i];
     }
 
     cout << "\nDisplaying scores of students." << endl;
-	for (int i = 0; i < num; ++i)
-		;
-        // your code here
+    for (int i = 0; i < num; ++i){
+      cout << ptr[i] << endl;
+    }
 
-    delete [] ptr;  
-    cout << "Happy Coding~~\n";
+    delete [] ptr;
+    cout << "Happy Coding~~\n" ;
     return 0;
 }
