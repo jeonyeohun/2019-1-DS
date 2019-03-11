@@ -1,0 +1,4 @@
+/Users/Hun/Desktop/2019-1/DS/Hun_projects/psets/pset02sort/sortDriver1.cpp:28:10: fatal error: 'nowic.h' file not found
+#include "nowic.h"
+         ^~~~~~~~~
+1 error generated.
