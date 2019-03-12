@@ -1,9 +1,9 @@
-// csort.cpp 
-// This is a sample code that runs okay, has a bad coding style. 
+// csort.cpp
+// This is a sample code that runs okay, has a bad coding style.
 // Reference: Fundamentals of Data Structures by Horowitz, Sahni
 //
-// When you compile the following code in Visual Studio, you may 
-// get the warning about scanf() or others. Then enter an addtional 
+// When you compile the following code in Visual Studio, you may
+// get the warning about scanf() or others. Then enter an addtional
 // compiler option /wd4996 in the following:
 // Project Properties -> C/C++ -> Command Line -> Additonal Options
 
@@ -15,7 +15,7 @@
 #define SWAP(x, y, t)  ((t) = (x), (x) = (y), (y) = (t))
 
 void sort(int[], int);
-
+#if 0
 int main(void) {
 	int i, n;
 	int list[MAX_SIZE];
@@ -42,8 +42,10 @@ int main(void) {
 
 	return 0;
 }
+#endif
 
 void sort(int list[], int n) {
+	printf("그냥이 좋아.");
 	int i, j, min, temp;
 	for (i = 0; i < n - 1; i++) {
 		min = i;

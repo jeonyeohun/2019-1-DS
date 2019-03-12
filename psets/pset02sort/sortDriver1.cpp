@@ -4,7 +4,7 @@
 * This program is written to run the sort algorithms.
 * It takes the number of data samples to sort from the user.
 * Then, the int array is created and filled with random numbers.
-* User may selection one of sort functions to be used. Then
+* User may one of sort functions to be used. Then
 * execution time and its output is displayed.
 *
 * History:
@@ -47,10 +47,9 @@ void randomize(int list[], int n) {
 	DPRINT(cout << ">randomize...N=" << n << endl;)
 	srand((unsigned)time(NULL));
 
-	for(int i=0 ; i<N ; i++){
-		list[i] = rand();
+	for(int i=0 ; i<n ; i++){
+		list[i] = (rand() % n);
 	}
-
 	DPRINT(cout << "<randomize" << endl;)
 }
 
@@ -61,7 +60,7 @@ void randomize(int list[], int n) {
 // or rear part of the list.  The per_line determines how many
 // samples prints per line.
 //
-// If max_print is larger than or equal to the sample size N,
+// If max_print is larger than or equal to the sample size ,
 // prints max_print/2 samples only.
 // For example:
 // Case 1) N = 12, max_print = 100, per_line = 20
@@ -84,17 +83,33 @@ void randomize(int list[], int n) {
 
 void printList(int *list, int N, int max_print, int per_line) {
 	DPRINT(cout << ">printList...N=" << N << " max_print=" << max_print << endl;)
-	
-		for(int i=0 ; i<per_line ; i++){
-			for (int j=0 ; j<per_line ; j++){
+	int cnt;
 
+	if (max_print <= N){
+		max_print/=2;
+		cout << "First " << max_print << endl;
+		for (int j=0 ; j<max_print ; j++){
+			if (j%per_line==0){
+				cout << "\n";
+			}
+			cout << list[j] << "\t";
+		}
+		cout << "\nLast " << max_print << endl;
+		for (int j=0 ; j<max_print ; j++){
+			if (j%per_line==0){
+				cout << "\n";
+			}
+			cout << list[N-max_print + j] << "\t";
+			}
+	}
+	else{
+			for (int j=0 ; j<N ; j++){
+				if (j%per_line==0){
+					cout << "\n";
+				}
+				cout << list[j] << "\t";
 			}
 		}
-		// your code here
-		// Optionally, you may create a help function such as _printList()/
-
-		cout << "your code here\n";
-
 	DPRINT(cout << "<printList" << endl;)
 }
 
@@ -112,6 +127,7 @@ int main(int argc, char *argv[]) {
 	char algorithm_list[4][20] = {"Bubble", "Insertion", "Quicksort", "Selection"};
 	enum algorithm_enum { BUBBLE, INSERTION, QUICKSORT, SELECTION };
 	int  algorithm_chosen = SELECTION;  // default algorithm chosen
+	void (*fn[]) (int* , int) = {bubbleSort, insertionSort, quickSort, selectionSort};
 	DPRINT(cout << ">main...N=" << N << endl;)
 
 	// Use setvbuf() to prevent the output from buffered on console.
@@ -136,11 +152,21 @@ int main(int argc, char *argv[]) {
 		case 'a': DPRINT(cout << "case = " << option_char << endl;)
 
 			switch (GetChar("\tEnter b for bubble, i for insertion, s for selection, q for quick sort: ")) {
-
-			// your code here
-			case 'b': break;
-
-			default: { cout << "\tNo such an algorithm available. Try it again.\n"; break; }
+				case 'b':
+					algorithm_chosen = 0;
+					break;
+				case 'i':
+					algorithm_chosen = 1;
+					break;
+				case 's':
+					algorithm_chosen = 3;
+					break;
+				case 'q':
+					algorithm_chosen = 2;
+					break;
+				default: {
+					cout << "\tNo such an algorithm available. Try it again.\n"; break;
+				}
 			}
 
 			//////////////
@@ -153,14 +179,18 @@ int main(int argc, char *argv[]) {
 				cout << "\tExpecting a number larger than 0";
 				break;
 			}
-
+			N = keyin;
 			// set N with the new keyin value
 			// before allocating the new list, free the old list if not NULL
 			// allocate memory for new data samples
 			// Fill the list with numbers from 0 to n - 1.
 
-			cout << "your code here\n";
-
+			if(list != NULL){
+				delete (list);
+			}
+			else{
+				list = new int[N];
+			}
 			break;
 
 		case 'r': DPRINT(cout << "case = " << option_char << endl;)
@@ -169,7 +199,9 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 
-			cout << "your code here\n";
+			randomize(list, N);
+			randomized = 'Y';
+			printList(list, N, max_print, per_line);
 
 			break;
 
@@ -178,23 +210,29 @@ int main(int argc, char *argv[]) {
 				cout << "\tSet sample size first\n";
 				break;
 			}
+			(*fn[algorithm_chosen])(list, N);
+
+			printList(list, N, max_print, per_line);
+
 			cout << "\tThe clock ticks and " << algorithm_list[algorithm_chosen] << " begins...\n";
 			start = clock();
 
-			cout << "your code here\n";
 
 			end = clock();
 			cout << "\tDuration: " << (end - start) / (double)CLOCKS_PER_SEC << " seconds\n";
+
+
 			break;
 
 		case 'm': DPRINT(cout << "case = " << option_char << endl;)
-
-			cout << "your code here\n";
+			 cout << "input Max_print: ";
+			 cin >> max_print;
 
 			break;
 		case 'd': DPRINT(cout << "case = " << option_char << endl;)
 
-			cout << "your code here\n";
+			cout << "input per_line: ";
+			cin >> per_line;
 
 			break;
 		default:
@@ -202,7 +240,7 @@ int main(int argc, char *argv[]) {
 		}
 	} while (option_char != 'q');
 
-	if (list != NULL) free(list);
+	if (list != NULL) delete(list);
 	// system("pause");
 	DPRINT(cout << ">main" << endl;)
 	return EXIT_SUCCESS;

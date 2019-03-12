@@ -24,6 +24,7 @@ using namespace std;
 #endif
 
 void insertionSort(int *list, int n) {
+	cout << "인설션이 좋아" <<endl;
 	int i, j, key;
 
 	for (i = 1; i < n; i++) {

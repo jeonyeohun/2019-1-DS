@@ -15,6 +15,7 @@ using namespace std;
 
 // A utility function to swap two elements
 void swap(int* a, int* b) {
+
 	int t = *a;
 	*a = *b;
 	*b = t;
@@ -24,6 +25,7 @@ void swap(int* a, int* b) {
 correct position in sorted array, and places all smaller (smaller than pivot)
 to left of pivot and all greater elements to right of pivot */
 int partition(int list[], int lo, int hi) {
+
 	int x = list[hi];  // pivot
 	int i = (lo - 1);  // Index of smaller element
 
@@ -42,6 +44,7 @@ int partition(int list[], int lo, int hi) {
 // list[]: array to be sorted, lo: Starting index, h: Ending index
 // N is added only for debugging or DPRINT
 void _quickSort(int *list, int lo, int hi, int N) {
+
 	if (lo < hi) 	{
 		int pi = partition(list, lo, hi); // Partitioning index
 		DPRINT(for (int x = 0; x < N; x++) printf("%d ", list[x]); printf("\n");)
@@ -51,6 +54,7 @@ void _quickSort(int *list, int lo, int hi, int N) {
 }
 
 void quickSort(int *a, int n) {
+	cout << "퀵이 좋아" <<endl;
 	_quickSort(a, 0, n - 1, n);  // the last argument n is added only for DPRINT()
 }
 
