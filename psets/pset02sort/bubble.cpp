@@ -22,7 +22,7 @@ using namespace std;
 
 void bubbleSort(int *list, int n) {
 	int i, j, temp;
-	cout << "bublle이 좋아";
+	cout << "\tSorting in bubbleSort mode..." <<endl;
 	for (i = 0; i < n - 1; i++) {
 		// last i elements are already in place
 		for (j = 0; j < n - i - 1; j++)

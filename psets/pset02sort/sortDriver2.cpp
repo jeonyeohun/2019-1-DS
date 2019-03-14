@@ -4,6 +4,7 @@
 	Section: 03
 	Student Number: 21500630
 */
+
 #include <cstdlib>
 #include <ctime>
 #include <cassert>
@@ -60,6 +61,7 @@ void printList(int *list, int N, int max_print, int per_line) {
 	cout << endl;
 	DPRINT(cout << "<printList" << endl;)
 }
+
 // sortDriver to test sort functions or algorithms.
 int main(int argc, char *argv[]) {
 	int N = 0;						// default sample size
@@ -72,8 +74,9 @@ int main(int argc, char *argv[]) {
 	char option_char;
 	char option_str[512];
 	char algorithm_list[4][20] = {"Bubble", "Insertion", "Quicksort", "Selection"};
-	enum algorithm_enum { BUBBLE, INSERTION , QUICKSORT , SELECTION };
+	enum algorithm_enum { BUBBLE, INSERTION, QUICKSORT, SELECTION };
 	int  algorithm_chosen = SELECTION;  // default algorithm chosen
+	void (*fn[]) (int* , int) = {bubbleSort, insertionSort, quickSort, selectionSort};
 	DPRINT(cout << ">main...N=" << N << endl;)
 
 	// Use setvbuf() to prevent the output from buffered on console.
@@ -154,39 +157,26 @@ int main(int argc, char *argv[]) {
 				break;
 			}
 
-
-
 			cout << "\tThe clock ticks and " << algorithm_list[algorithm_chosen] << " begins...\n";
 			start = clock();
 
-			if (algorithm_chosen == BUBBLE){
-				bubbleSort(list, N);
-			}
-			else if(algorithm_chosen == INSERTION){
-				insertionSort(list, N);
-			}
-			else if(algorithm_chosen == QUICKSORT){
-				quickSort(list, N);
-			}
-			else if(algorithm_chosen == SELECTION){
-				selectionSort(list, N);
-			}
+			(*fn[algorithm_chosen])(list, N);
 
 			end = clock();
-			cout << "\tDuration: " << (end - start) / (double)CLOCKS_PER_SEC << " seconds\n";
 			randomized = 'N';
 
 			printList(list, N, max_print, per_line);
+			cout << "\tDuration: " << (end - start) / (double)CLOCKS_PER_SEC << " seconds\n";
 
 
 			break;
 
-			case 'm': DPRINT(cout << "case = " << option_char << endl;)
-				max_print = GetInt("\tinput max samples to display per line: ");
-				break;
-			case 'd': DPRINT(cout << "case = " << option_char << endl;)
-				per_line = GetInt("\tinput max samples to display per line: ");
-				break;
+		case 'm': DPRINT(cout << "case = " << option_char << endl;)
+			max_print = GetInt("\tinput max samples to display per line: ");
+			break;
+		case 'd': DPRINT(cout << "case = " << option_char << endl;)
+			per_line = GetInt("\tinput max samples to display per line: ");
+			break;
 		default:
 			break;
 		}

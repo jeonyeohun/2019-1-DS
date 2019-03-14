@@ -1,42 +1,45 @@
-// csort.cpp
-// This is a sample code that runs okay, has a bad coding style.
-// Reference: Fundamentals of Data Structures by Horowitz, Sahni
-//
-// When you compile the following code in Visual Studio, you may
-// get the warning about scanf() or others. Then enter an addtional
-// compiler option /wd4996 in the following:
-// Project Properties -> C/C++ -> Command Line -> Additonal Options
+/*
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
+*/
 
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
-
-#define MAX_SIZE 101
-#define SWAP(x, y, t)  ((t) = (x), (x) = (y), (y) = (t))
+#include <cstdlib>
+#include <ctime>
+#include <cassert>
+#include <iostream>
+#include <iomanip>
+#include "nowic.h"
+using namespace std;
 
 void sort(int[], int);
-#if 0
+#if 1
 int main(void) {
 	int i, n;
-	int list[MAX_SIZE];
-	printf("Enter the number of samples: ");
-	scanf("%d", &n);
-	if (n < 1 || n > MAX_SIZE) {
-		fprintf(stderr, "Improper value of n");
+	srand(time(NULL));
+	cout << "Enter the number of samples: ";
+	cin >> n;
+
+	if (n < 1 ) {
+		cout << "invalid number\n";
 		exit(1);
 	}
 
-	printf("\nUnSorted array:\n");
+	int* list = new int[n];
+
+
+	cout << "\nUnSorted array:\n";
 	for (i = 0; i < n; i++) {       // randomly generate numbers
 		list[i] = rand() % 1000;
-		printf("%d  ", list[i]);
+		cout << list[i] << "\t";
 	}
 
 	sort(list, n);
 
-	printf("\nSorted array:\n");
+	cout << "\nSorted array:\n";
 	for (i = 0; i < n; i++) {
-		printf("%d  ", list[i]);
+		cout << list[i] << "\t";
 	}
 	printf("\n");
 
@@ -45,13 +48,15 @@ int main(void) {
 #endif
 
 void sort(int list[], int n) {
-	printf("그냥이 좋아.");
 	int i, j, min, temp;
 	for (i = 0; i < n - 1; i++) {
 		min = i;
 		for (j = i + 1; j < n; j++)
-			if (list[j] < list[min])
+			if (list[j] < list[min]){
 				min = j;
-		SWAP(list[i], list[min], temp);
+			}
+			temp = list[i];
+			list[i] = list[min];
+			list[min] = temp;
 	}
 }

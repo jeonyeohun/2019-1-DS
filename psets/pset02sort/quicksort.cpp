@@ -54,7 +54,7 @@ void _quickSort(int *list, int lo, int hi, int N) {
 }
 
 void quickSort(int *a, int n) {
-	cout << "퀵이 좋아" <<endl;
+	cout << "\tSorting in quickSort mode..." <<endl;
 	_quickSort(a, 0, n - 1, n);  // the last argument n is added only for DPRINT()
 }
 

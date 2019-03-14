@@ -1,15 +1,8 @@
-/** This brute force version of Selection Sort that takes O(n^2).
-* Instructor: Youngsup Kim
-*
-* 12/10/2016: Created
-* 12/10/2016: Compilation and DEBUG/DPRINT option added
-*
-* Compilation:
-*	g++ insertion.cpp -o sort
-*   g++ -DDEBUG insertion.cpp -o sort
-*
-* To use DEBUG or test it, compile with -D option and turn #if 1 on.
-* To make the function included in other program, turn #if 0 off.
+/*
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
 */
 
 #include <iostream>
@@ -24,7 +17,7 @@ using namespace std;
 #endif
 
 void insertionSort(int *list, int n) {
-	cout << "인설션이 좋아" <<endl;
+	cout << "\tSorting in insertionSort mode..." <<endl;
 	int i, j, key;
 
 	for (i = 1; i < n; i++) {
