@@ -1,13 +1,8 @@
-// C++ for C Coders & Data Structures
-// Lecture note by idebtor@gmail.com
 /*
-* This brute force version of Selection Sort that takes O(n^2).
-*
-*  Lab - Using C++, rewrite lab02a.cpp and name the file as lab03.cpp.
-*		- <iostream>, <cstdlib>, <cmath>, <cassert>
-*		- using namespace std
-*		- cin, cout, endl
-*		- use new and delete operators instead of malloc() and free()
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
 */
 #include <iostream>
 #include <cmath>

@@ -1,3 +1,9 @@
+/*
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
+*/
 #ifndef SORT_H
 #define SORT_H
 
