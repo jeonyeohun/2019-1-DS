@@ -48,8 +48,8 @@ int main(int argc, char* argv[]) {
 	void (*fp[]) (int*, int, int(*comp)(int, int)) = {bubbleSort, insertionSort, quickSort, selectionSort};
 
 	// int *list = (int *)malloc(N * sizeof(int));
-	int *list = new int[N];
-	assert(list != NULL);
+	int *list = new (nothrow) int[N]; // nothrow 를 사용하면 allocation이 안됐을 때, 예외처리를 해준다. 잘못되면 nullptr을 리턴해준다.
+	assert(list != nullptr);	// list에 nullptr이 저장되어 있으면 프로그램을 종료시킨다.
 
 	for (int i = 0; i < N; i++)
 		list[i] = rand() % N;
@@ -88,7 +88,7 @@ int main(int argc, char* argv[]) {
 
 	cout << "\nTest Case: Using an array of function pointers\n" << "=============================================================" << endl;
 
-	for(int i=0 ; i<4 ; i++){
+	for(int i=0 ; i<sizeof(fp)/sizeof(fp[0]) ; i++){
 		for (int i = 0; i < N; i++) {list[i] = rand() % N;}
 		cout << "Notsorted[" << name[i] <<"]: ";
 		print_list(list, N);
