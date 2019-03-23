@@ -33,15 +33,17 @@
  * OUTPUT:
  *		returns the array index of `key` in the list'
  *		returns -1 or something else?
- * NOTE: 
+ * NOTE:
  * If the key is not found, low is the insertion point where a key would be
  * inserted to maintain the order of the list.  It is more useful to return
  * the insertion point than -1.  The method must return a negative value to
- * indicate that the key is not in the list. Can it simply return -low? 
+ * indicate that the key is not in the list. Can it simply return -low?
  */
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 #ifdef DEBUG
@@ -53,14 +55,30 @@ using namespace std;
 int _binary_search(int *data, int key, int lo, int hi) {
 	DPRINT(cout << "key=" << key << " lo=" << lo << " hi=" << hi << endl;);
 
-	cout << "your code here \n";
+	if (lo > hi) {
+		if ((lo+hi)/2==0){
+			return -1;
+		}
+		else{
+			return -(lo+hi)/2;
+		}
+	}
 
-	return 0;
+	if (key>data[(lo+hi)/2]){
+		return _binary_search(data, key, (lo+hi)/2+1, hi);
+	}
+	else if (key<data[(lo+hi)/2]){
+		return _binary_search(data, key, lo, (lo+hi)/2-1);
+	}
+	else{
+		return (lo+hi)/2;
+	}
+
 }
 
 int binary_search(int *list, int key, int size) {
 	DPRINT(cout << ">binary_search: key=" << key << " size=" << size << endl;);
-	int answer = _binary_search(list, key, 0, size);
+	int answer = _binary_search(list, key, 0, size-1);
 	DPRINT(cout << "<binary_search: answer=" << answer << endl;);
 	return answer;
 }
@@ -69,18 +87,20 @@ int binary_search(int *list, int key, int size) {
 int main(int argc, char *argv[]) {
 	int list[] = { 3, 5, 6, 9, 11, 12, 15, 16, 18, 19, 20 };
 	int size = sizeof(list) / sizeof(list[0]);
+	srand(time(NULL));
 
 	cout << "list: ";
 	for (int i = 0; i < size; i++)
 		cout << list[i] << " ";
-	cout << endl;
+		cout << endl;
 
-	// randomly generate numbers to search between
-	// list[0] = 3 and list[size-1] = 20, inclusviely. 
-	// do this by 'size' times.
-	// print the results as shown in binsearchx.exe.
-
-	cout << "your code here \n";
-
+	int key = rand()%size;
+	int ans = binary_search(list, key, size);
+	if (ans < 0){
+		cout << key << "\t is not @[" << ans*-1 << "]"  << endl;
+	}
+	else{
+		cout << key << "\t is @[" << ans << "]"  << endl;
+	}
 }
 #endif

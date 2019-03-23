@@ -59,7 +59,7 @@ int main(int argc, char *argv[]) {
 			"\t10. Recursive Binary Search\n";
 
 		switch (option = GetInt("\tCommand(0 to quit): ")) {
-		case 0: 
+		case 0:
 			cout << "Happy Coding~~\n";
 			exit(EXIT_SUCCESS);
 
@@ -107,8 +107,9 @@ int main(int argc, char *argv[]) {
 			}
 			break;
 		case 4:
+			cout << "\tbunnyEars Examples:\n";
 			cout << "\tbunnyEars(0) = 0\n";
-			cout << "\tbunnyEars(1) = 2\n"; 
+			cout << "\tbunnyEars(1) = 2\n";
 			cout << "\tbunnyEars(2) = 4\n";
 			cout << "\tbunnyEars(3) = 6\n";
 			cout << "\tbunnyEars(234) = 468\n";
@@ -119,22 +120,70 @@ int main(int argc, char *argv[]) {
 			}
 			break;
 		case 5:
-			cout << "your code here\n";
+			cout << "\tfunnyEars Examples:\n";
+			cout << "\tfunnyEars(0) = 0\n";
+			cout << "\tfunnyEars(1) = 2\n";
+			cout << "\tfunnyEars(2) = 5\n";
+			cout << "\tfunnyEars(3) = 7\n";
+			cout << "\tfunnyEars(4) = 10\n";
+			cout << "\tfunnyEars(9) = 22\n";
+			while (1) {
+				N = GetInt("\tEnter a number of funnies(0 to quit): ");
+				if (N <= 0) break;
+				cout << "\ttriangles(" << N << ") = " << funnyEars(N) << endl;
+			}
 			break;
 		case 6:
-			cout << "your code here\n";
-			break;
+			cout << "\ttriangle Examples:\n";
+			cout << "\ttriangle(0) = 0\n";
+			cout << "\ttriangle(1) = 1\n";
+			cout << "\ttriangle(2) = 3\n";
+			cout << "\ttriangle(3) = 6\n";
+			cout << "\ttriangle(4) = 10\n";
+			cout << "\ttriangle(7) = 28\n";
+			while (1) {
+				N = GetInt("\tEnter a number of triangles(0 to quit): ");
+				if (N <= 0) break;
+				cout << "\ttriangle(" << N << ") = " << triangle(N) << endl;
+			}
+				break;
 		case 7:
-			cout << "your code here\n";
+			cout << "\tsumDigits Examples:\n";
+			cout << "\tsumDigits(126) = 9\n";
+			cout << "\tsumDigits(12) = 3\n";
+			cout << "\tsumDigits(1) = 1\n";
+			cout << "\tsumDigits(10110) = 3\n";
+			cout << "\tsumDigits(235) = 10\n";
+			while(1){
+				N = GetInt("\tEnter a number of non-negative integer(0 to quit): ");
+				if (N <= 0) break;
+				cout << "\tsumDigits(" << N << ") = " << sumDigits(N) << endl;
+			}
 			break;
 		case 8:
-			cout << "your code here\n";
+			cout << "\tcount8 Examples:\n";
+			cout << "\tcount8(818) = 2\n";
+			cout << "\tcount8(8) = 1\n";
+			cout << "\tcount8(123) = 0\n";
+			cout << "\tcount8(881238) = 3\n";
+			cout << "\tcount8(48581) = 2\n";
+			cout << "\tcount8(888586198) = 5\n";
+			cout << "\tcount8(99899) = 1\n";
+			while(1){
+				N = GetInt("\tEnter a number of non-negative integer(0 to quit): ");
+				if (N <= 0) break;
+				cout << "\tcount8(" << N << ") = " << count8(N) << endl;
+			}
 			break;
 		case 9:
-			cout << "your code here\n";
+			while(1){
+				N = GetInt("\tEnter a number of base(0 to quit): ");
+				int power = GetInt("\tEnter a number of power(0 to quit): ");
+				if (N <= 0 || power <=0 ) break;
+				cout << "\tPowerN(" << N << "," << power << ") = " << powerN(N, power) << endl;
+			}
 			break;
-
-		case 10:   
+		case 10:
 			cout << "\tRecursive Binary Search\n ";
 			while (1) {
 				N = GetInt("\tEnter a list size to generate(0 to quit) : ");
@@ -159,6 +208,7 @@ int main(int argc, char *argv[]) {
 
 				delete list;
 			}
+			break;
 		default:
 			break;
 		}

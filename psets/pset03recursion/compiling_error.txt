@@ -1,0 +1,7 @@
+/Users/Hun/Desktop/2019-1/DS/Hun_projects/psets/pset03recursion/binsearch.cpp:78:17: error: no matching function for call to 'rand'
+        int key = list[rand(0, size-1)]
+                       ^~~~
+/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.14.sdk/usr/include/stdlib.h:162:6: note: candidate function not viable: requires 0 arguments, but 2 were provided
+int      rand(void) __swift_unavailable("Use arc4random instead.");
+         ^
+1 error generated.
