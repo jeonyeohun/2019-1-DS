@@ -1,15 +1,8 @@
-﻿/*
- * Lecture Notes on Recursion by Youngsup Kim
- * Recursive algorithm is expressed in terms of
- * 1. base case(s) for which the solution can be stated non‐recursively,
- * 2. recursive case(s) for which the solution can be expressed in terms
- *    of a smaller version of itself.
- *
- * @author: idebtor@gmail.com
- * 2018/03/08	Creation
- * 2019/02/02	C++ Conversion
- *
- */
+/*
+Include the following line at the top of your every source file with your name signed.
+On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
+*/
 
 #include <iostream>
 

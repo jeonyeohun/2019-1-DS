@@ -1,17 +1,7 @@
-/**
-* Author:		Youngsup Kim
-* Description:	This program is written to run and test some recursion algorithms.
-*
-* On my honour, I pledge that I have neither received nor provided improper
-* assistance in the completion of this assignment. Signed: ____YOUR NAME______
-*
-* To build this program:
-*  g++ recursionDriver.cpp recursion.cpp binsearch.cpp quicksort.cpp
-*      -I../include -L../lib -lnowic -o recursion
-*
-* History:
-* 2018/02/10	Created
-* 2019/02/02	C++ Conversion
+/*
+Include the following line at the top of your every source file with your name signed.
+On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
 */
 
 #ifdef DEBUG
@@ -196,17 +186,22 @@ int main(int argc, char *argv[]) {
 					list[i] = rand() % N;
 
 				quickSort(list, N);
+				cout << "\t" ;
 				for (int i = 0; i < N; i++)
 					cout << list[i] << " ";
 				cout << endl;
 
 				int key = GetInt("\tEnter a number to search: ");
-				int index = binary_search(list, key, N);
+				int ans = binary_search(list, key, N);
 
-				cout << "index=" << index << endl;
-				cout << "your code here to replace the line above.\n";
+				if (ans < 0){
+					cout << "\t" <<key << "\t is not @[" << ans*-1 << "]"  << endl;
+				}
+				else{
+					cout << "\t"<< key << "\t is @[" << ans << "]"  << endl;
+				}
 
-				delete list;
+				delete []list;
 			}
 			break;
 		default:
