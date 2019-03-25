@@ -1,30 +1,7 @@
 /*
- * This program tests binary_search():
- *
- * The binary search algorithm is a method of searching a sorted array for a single
- * element by cutting the array in half with each recursive pass.The trick is to
- * pick a midpoint near the center of the array, compare the data at that point
- * with the data being searched and then responding to one of three possible
- * conditions : the data is found at the midpoint, the data at the midpoint is
- * greater than the data being searched for, or the data at the midpoint is less
- * than the data being searched for.
- * Recursion is used in this algorithm because with each pass a new array is
- * created by cutting the old one in half.The binary search procedure is then
- * called recursively, this time on the new (and smaller) array.
- * Typically, the array's size is adjusted by manipulating a beginning and
- * ending index. The algorithm exhibits a logarithmic order of growth because
- * it essentially divides the problem domain in half with each pass.
- *
- * In this example, you need an extra function at user's convenience since a
- * user may want to simply call the function with three parameters such as
- * binsearch(data, key, size).  Once you get the user's initial call,
- * then you call binary_search(data, key, lo, hi) recursively.
- *
- * To build this program:
- *  g++ binsearchDriver.cpp binsearch.cpp quicksort.cpp -o binsearch
- *
- * 2018/03/08	Creation
- * 2018/02/02	C++ Conversion
+	 Include the following line at the top of your every source file with your name signed.
+	 On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+	 Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
  */
 
 #include <iostream>
@@ -45,7 +22,7 @@ int main(int argc, char *argv[]) {
 	int keyin;
 	cout << "Enter numbers to sort(q to quit): ";
 	while (cin >> keyin) {
-		cout << "your code here\n"		// adding to the end // 정수가 아닌 무언가를 마지막에 타이프를 하면 앞까지의 모든 정수를 다 벡터리스트에 저장한다.
+		list.push_back(keyin);		// adding to the end // 정수가 아닌 무언가를 마지막에 타이프를 하면 앞까지의 모든 정수를 다 벡터리스트에 저장한다.
 	}
 
 	int N = list.size(); // 와 이거 하면 바로 사이즈도 알 수 있당..
@@ -58,19 +35,37 @@ int main(int argc, char *argv[]) {
 	srand((unsigned)time(NULL));	// comment out when debugging
 
 	// get a random number to use as a key for testing the binary search.
-	cout << "your code here\n"
+	int key = rand() % list[N-1];
 
 	cout << "\n\t" << key << " To Be Found.\n";
 
 	// invoke bineary_search to find key in the list.
 	// display the result
 
-  cout << "your code here\n"
+  int ans = binary_search(&list[0], key, N);
 
+	if (ans == N)
+		cout << "\t" << key << " is not @[0]"  << endl;
+	else if (ans < 0)
+		cout << "\t" << key << " is not @[" << ans*-1 << "]"  << endl;
+	else
+		cout << "\t" << key << " is @[" << ans << "]"  << endl;
+
+	if (ans<0){ans*=-1;}
 	// print a few data around a possible key index or -index to check your output.
 	int extra = 4;						// a magic number
-
-	cout << "your code here\n" // 이건 양심상 해야되는 부분....교수님이 다 해주셨는데 이거 못하면 양심이 없는거...
+	for (int i=(ans-extra) ; i< ans ; i++){
+		int extraans = binary_search(&list[0], list[i], N);
+		cout << "\t[" << i << "]" << "=" << list[extraans] << endl;
+	}
+	for (int i=ans ; i< ans+extra ; i++){
+		int extraans = binary_search(&list[0], list[i], N);
+		cout << "\t[" << i << "]" << "=" << list[extraans] << endl;
+		if ((i+1) >= N){
+			break;
+		}
+	}
+	// 이건 양심상 해야되는 부분....교수님이 다 해주셨는데 이거 못하면 양심이 없는거...
 
 	cout << "Happy Coding~~\n";
 	// system("pause");

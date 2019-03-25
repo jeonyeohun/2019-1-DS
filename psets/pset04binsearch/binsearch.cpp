@@ -1,43 +1,7 @@
- /*
- * This program implements a recurisve binary_search():
- *
- * The binary search algorithm is a method of searching a sorted array for a single
- * element by cutting the array in half with each recursive pass.The trick is to
- * pick a midpoint near the center of the array, compare the data at that point
- * with the data being searched and then responding to one of three possible
- * conditions : the data is found at the midpoint, the data at the midpoint is
- * greater than the data being searched for, or the data at the midpoint is less
- * than the data being searched for.
- * Recursion is used in this algorithm because with each pass a new array is
- * created by cutting the old one in half.The binary search procedure is then
- * called recursively, this time on the new (and smaller) array.
- * Typically, the array's size is adjusted by manipulating a beginning and
- * ending index. The algorithm exhibits a logarithmic order of growth because
- * it essentially divides the problem domain in half with each pass.
- *
- * In this example, you need an extra function at user's convenience since a
- * user may want to simply call the function with three parameters such as
- * binary_search(data, key, size).  Once you get the user's initial call,
- * then you call _binary_search(data, key, low, high) recursively.
- *
- * @author: idebtor@gmail.com
- * 2018/03/08	Creation
- * 2019/02/01	Using cpp
- *
- * int _binary_search(int *list, int key, int lo, int hi)
- * implements a recursive binary search algorithm.
- * INPUT:
- *		*list is a array of integers SORTED in ASCENDING order,
- *		key is the integer to search for, lo is the minimum
- *      array index, hi is the maximum array index
- * OUTPUT:
- *		returns the array index of `key` in the list'
- *		returns -1 or something else?
- * NOTE:
- * If the key is not found, low is the insertion point where a key would be
- * inserted to maintain the order of the list.  It is more useful to return
- * the insertion point than -1.  The method must return a negative value to
- * indicate that the key is not in the list. Can it simply return -low?
+/*
+ Include the following line at the top of your every source file with your name signed.
+ On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+ Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
  */
 
 #include <iostream>
@@ -50,16 +14,37 @@ using namespace std;
 #define DPRINT(func) ;
 #endif
 
+int MAX_SIZE;
+
 int _binary_search(int *data, int key, int lo, int hi) {
 	DPRINT(cout << "key=" << key << " lo=" << lo << " hi=" << hi << endl;);
 
-	cout << "your code here \n";
+
+	if (key==data[(lo+hi)/2]){
+		return (lo+hi)/2;
+	}
+	if (lo > hi) {
+		if ((lo+hi)/2==0){
+			return MAX_SIZE;
+		}
+		else{
+			return -lo;
+		}
+	}
+	if (key>data[(lo+hi)/2]){
+		return _binary_search(data, key, (lo+hi)/2+1, hi);
+	}
+	else{
+		return _binary_search(data, key, lo, (lo+hi)/2-1);
+	}
+
 
 	return 0;
 }
 
 int binary_search(int *list, int key, int size) {
 	DPRINT(cout << ">binary_search: key=" << key << " size=" << size << endl;);
+	MAX_SIZE = size;
 	int answer = _binary_search(list, key, 0, size);
 	DPRINT(cout << "<binary_search: answer=" << answer << endl;);
 	return answer;
@@ -69,18 +54,28 @@ int binary_search(int *list, int key, int size) {
 int main(int argc, char *argv[]) {
 	int list[] = { 3, 5, 6, 9, 11, 12, 15, 16, 18, 19, 20 };
 	int size = sizeof(list) / sizeof(list[0]);
+	srand(time(NULL));
 
 	cout << "list: ";
 	for (int i = 0; i < size; i++)
 		cout << list[i] << " ";
-	cout << endl;
+		cout << endl;
 
-	// randomly generate numbers to search between
-	// list[0] = 3 and list[size-1] = 20, inclusviely.
-	// do this by 'size' times.
-	// print the results as shown in binsearchx.exe.
+	for (int i=0 ; i< 10 ; i++){
+		int key = rand()%20;
+		int ans = binary_search(list, key, size);
 
-	cout << "your code here \n";
+		if (ans > size){
+			cout << key << "\t is not @[" << 0 << "]"  << endl;
+		}
+		else if (ans < 0){
+			cout << key << "\t is not @[" << ans*-1 << "]"  << endl;
+		}
+
+		else{
+			cout << key << "\t is @[" << ans << "]"  << endl;
+		}
+	}
 
 }
 #endif

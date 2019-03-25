@@ -1,16 +1,7 @@
 /*
- * randomN.cpp
- *	Generates N random numbers in the range of [0..N)
- *  and prints them at stdout. N is specified as a
- *  command line argument. For example, randomN 100
- *  will generate 100 numbers among [0..99].
- *
- * Usage:
- *   randomN 100
- *
- * History:
- *	2018/03/09	YSK Creation
- *  2019/02/01	C++ conversion
+ 	Include the following line at the top of your every source file with your name signed.
+	On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
  */
 #include <iostream>
 #include <ctime>
