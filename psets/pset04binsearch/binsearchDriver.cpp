@@ -55,12 +55,13 @@ int main(int argc, char *argv[]) {
 	// print a few data around a possible key index or -index to check your output.
 	int extra = 4;						// a magic number
 	for (int i=(ans-extra) ; i< ans ; i++){
-		int extraans = binary_search(&list[0], list[i], N);
-		cout << "\t[" << i << "]" << "=" << list[extraans] << endl;
+		if (i < 0){
+			i = 0;
+		}
+		cout << "\t[" << i << "]" << "=" << list[i] << endl;
 	}
-	for (int i=ans ; i< ans+extra ; i++){
-		int extraans = binary_search(&list[0], list[i], N);
-		cout << "\t[" << i << "]" << "=" << list[extraans] << endl;
+	for (int i=ans ; i<= ans+extra ; i++){
+		cout << "\t[" << i << "]" << "=" << list[i] << endl;
 		if ((i+1) >= N){
 			break;
 		}
