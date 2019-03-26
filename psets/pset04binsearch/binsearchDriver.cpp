@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 	// get a random number to use as a key for testing the binary search.
 	int key = rand() % list[N-1];
 
-	cout << "\n\t" << key << " To Be Found.\n";
+	cout << "\t" << key << " To Be Found.\n";
 
 	// invoke bineary_search to find key in the list.
 	// display the result
