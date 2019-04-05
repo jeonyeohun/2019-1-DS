@@ -38,6 +38,7 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
+#include <cmath>
 
 using namespace std;
 
@@ -54,8 +55,14 @@ int getStep(int n) {
 	int digit = 1;
 	int step = 1;
 
-	// your code here
-	step = 100;
+	while(n>0){
+		n /= 10;
+		digit++;
+	}
+	step = pow(10, digit-2);
+
+	//cout << digit << endl;
+	//cout << step << endl;
 
 	return step;
 }
@@ -74,7 +81,7 @@ void getRandomSample(int list[], int size) {
 
 	srand((unsigned)time(NULL));	    // initialize random seed
 	for (int i = 0; i < size; i++) {
-		int x = (rand() * (RAND_MAX + 1) + rand()) % size;
+		int x = rand() % size;
 		int t = list[x];                // swap - the current i with randomly selected x
 		list[x] = list[i];
 		list[i] = t;
@@ -134,15 +141,16 @@ int main(int argc, char *argv[]) {
 		do {
 			repetitions++;
 			getRandomSample(list, i);			// shuffle the array
-			selectionSort(list, i);
+			quickSort(list, i);
 		} while (clock() - start < 1000);		// run it over one sec
 
 		duration = ((double)(clock() - start)) / CLOCKS_PER_SEC;
 		duration /= repetitions;
 
-		cout << setw(10) << i << "\t"
+
+		cout << fixed << setprecision(6) << setw(10) << i << "\t"
 			<< setw(12) << repetitions << "\t"
-			<< setw(12) << duration << endl;
+			<< setw(12) <<duration << endl;
 	}
 
 	delete list;
