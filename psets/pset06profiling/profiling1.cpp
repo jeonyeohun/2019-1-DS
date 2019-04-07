@@ -1,3 +1,10 @@
+/*
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
+*/
+
 /**
 * Author:		Youngsup Kim
 * Description:	This program profiles the complexity of sorting algorithms.
@@ -141,7 +148,7 @@ int main(int argc, char *argv[]) {
 		do {
 			repetitions++;
 			getRandomSample(list, i);			// shuffle the array
-			quickSort(list, i);
+			selectionSort(list, i);
 		} while (clock() - start < 1000);		// run it over one sec
 
 		duration = ((double)(clock() - start)) / CLOCKS_PER_SEC;

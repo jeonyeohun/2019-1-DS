@@ -1,3 +1,10 @@
+/*
+	On my Honour, I pledge that I have neither recieved nor provided improper assistance in the completion of this assignment.
+	Signed: Jeon Yeo Hun
+	Section: 03
+	Student Number: 21500630
+*/
+
 /**
 * Author:		Youngsup Kim
 * Description:	This program profiles the complexity of sorting algorithms.
@@ -38,6 +45,7 @@
 #include <iomanip>
 #include <string>
 #include <sstream>
+#include <cmath>
 
 using namespace std;
 
@@ -54,11 +62,18 @@ int getStep(int n) {
 	int digit = 1;
 	int step = 1;
 
-	// your code here
-	step = 100;
+	while(n>0){
+		n /= 10;
+		digit++;
+	}
+	step = pow(10, digit-2);
 
+	//cout << digit << endl;
+	//cout << step << endl;
 	return step;
 }
+
+
 
 // rand() returns a random number between 0 and RAND_MAX which is defined in stdlib.h
 // RAND_MAX is surprisingly small (30K ~ 50K range, not 1M nor 1B) and also depends
@@ -74,7 +89,7 @@ void getRandomSample(int list[], int size) {
 
 	srand((unsigned)time(NULL));	    // initialize random seed
 	for (int i = 0; i < size; i++) {
-		int x = (rand() * (RAND_MAX + 1) + rand()) % size;
+		int x = rand() % size;
 		int t = list[x];                // swap - the current i with randomly selected x
 		list[x] = list[i];
 		list[i] = t;
@@ -82,20 +97,33 @@ void getRandomSample(int list[], int size) {
 }
 
 //////////////// Step 4: your code here ////////////////////////////////////
-/*
-void sortProfiling(void (*sortFunc)(int *, int), int *list, int n,
-int starting_samples = STARTING_SAMPLES)
-{
+void sortProfiling(void (*sortFunc)(int*, int), int *list, int n, int starting_samples = STARTING_SAMPLES){
+	double duration;
+	cout << "         n\t repetitions\t   sort(sec)\n";
+	for (int i = STARTING_SAMPLES; i <= n; i += getStep(i)) {
+		long repetitions = 0;
+		clock_t start = clock();
+		do {
+			repetitions++;
+			getRandomSample(list, i);			// shuffle the array
+			(*sortFunc)(list, n);
+		} while (clock() - start < 1000);		// run it over one sec
+
+		duration = ((double)(clock() - start)) / CLOCKS_PER_SEC;
+		duration /= repetitions;
 
 
-}
-*/
+		cout << fixed << setprecision(6) << setw(10) << i << "\t"
+			<< setw(12) << repetitions << "\t"
+			<< setw(12) <<duration << endl;
+		}
+	}
 
 
 /////////////////////////////////////////////////////////////////////////////
 ////// Step 5: Turn off this main() and use one in sortDriver3.cpp //////////
 /////////////////////////////////////////////////////////////////////////////
-#if 1
+#if 0
 int main(int argc, char *argv[]) {
 	int N = 0;
 	int *list;
@@ -126,24 +154,7 @@ int main(int argc, char *argv[]) {
 	cout << "The maximum sample data size is " << N << "\n";
 	list = new int[N];
 
-	double duration;
-	cout << "         n\t repetitions\t   sort(sec)\n";
-	for (int i = STARTING_SAMPLES; i <= N; i += getStep(i)) {
-		long repetitions = 0;
-		clock_t start = clock();
-		do {
-			repetitions++;
-			getRandomSample(list, i);			// shuffle the array
-			selectionSort(list, i);
-		} while (clock() - start < 1000);		// run it over one sec
-
-		duration = ((double)(clock() - start)) / CLOCKS_PER_SEC;
-		duration /= repetitions;
-
-		cout << setw(10) << i << "\t"
-			<< setw(12) << repetitions << "\t"
-			<< setw(12) << duration << endl;
-	}
+	sortProfiling (selectionSort, list, N, STARTING_SAMPLES);
 
 	delete list;
 	return 0;

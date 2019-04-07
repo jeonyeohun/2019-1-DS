@@ -11,13 +11,11 @@
 #include <iostream>
 #include <iomanip>
 #include "nowic.h"
+#include "sort.h"
+#define STARTING_SAMPLES 100
 
 using namespace std;
-
-void bubbleSort(int *list, int n);
-void insertionSort(int *list, int n);
-void quickSort(int *list, int n);
-void selectionSort(int *list, int n);
+void sortProfiling(void (*sortFunc)(int*, int), int *list, int n, int starting_samples = STARTING_SAMPLES);
 void printList(int *list, int n, int max_print, int per_line);
 void randomize(int list[], int n);
 
@@ -90,6 +88,7 @@ int main(int argc, char *argv[]) {
 			"\tr - randomize(shuffle) samples\n"
 			"\ta - algorithm to run\n"
 			"\ts - sort()\n"
+			"\tp - profiling()\n"
 			"\tm - max samples to display at front or rear\n"
 			"\td - max samples to display per line\n";
 
@@ -124,10 +123,12 @@ int main(int argc, char *argv[]) {
 		case 'n': DPRINT(cout << "case = " << option_char;)
 
 			keyin = GetInt("\tEnter input sample size: ");
-			if (keyin < 1) {
-				cout << "\tExpecting a number larger than 0";
+
+			if (keyin <= STARTING_SAMPLES) {
+				cout << "\tEnter a number much larger than " << STARTING_SAMPLES << ".\n";
 				break;
 			}
+
 			N = keyin;
 
 			if(list != NULL){
@@ -174,6 +175,11 @@ int main(int argc, char *argv[]) {
 		case 'm': DPRINT(cout << "case = " << option_char << endl;)
 			max_print = GetInt("\tinput max samples to display per line: ");
 			break;
+
+		case 'p' :
+			sortProfiling(fn[algorithm_chosen], list, N, STARTING_SAMPLES);
+			break;
+
 		case 'd': DPRINT(cout << "case = " << option_char << endl;)
 			per_line = GetInt("\tinput max samples to display per line: ");
 			break;

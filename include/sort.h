@@ -13,10 +13,10 @@
 #include <cstring>
 int ascending (int a, int b) {return a - b;}
 int descending (int a, int b) {return b - a;}
-void insertionSort(int *list, int n, int(*comp)(int a, int b)=ascending);
-void selectionSort(int *list, int n, int(*comp)(int a, int b)=ascending);
-void quickSort(int *list, int n, int(*comp)(int a, int b)=ascending);
-void bubbleSort(int *list, int n, int(*comp)(int a, int b)=ascending);
+void insertionSort(int *list, int n);
+void selectionSort(int *list, int n);
+void quickSort(int *list, int n);
+void bubbleSort(int *list, int n);
 
 
 
