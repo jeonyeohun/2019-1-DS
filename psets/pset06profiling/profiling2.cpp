@@ -107,7 +107,7 @@ void sortProfiling(void (*sortFunc)(int*, int), int *list, int n, int starting_s
 			repetitions++;
 			getRandomSample(list, i);			// shuffle the array
 			(*sortFunc)(list, n);
-		} while (clock() - start < 1000);		// run it over one sec
+		} while (clock() - start < 1000000);		// run it over one sec
 
 		duration = ((double)(clock() - start)) / CLOCKS_PER_SEC;
 		duration /= repetitions;
@@ -123,7 +123,7 @@ void sortProfiling(void (*sortFunc)(int*, int), int *list, int n, int starting_s
 /////////////////////////////////////////////////////////////////////////////
 ////// Step 5: Turn off this main() and use one in sortDriver3.cpp //////////
 /////////////////////////////////////////////////////////////////////////////
-#if 0
+#if 1
 int main(int argc, char *argv[]) {
 	int N = 0;
 	int *list;
@@ -154,7 +154,7 @@ int main(int argc, char *argv[]) {
 	cout << "The maximum sample data size is " << N << "\n";
 	list = new int[N];
 
-	sortProfiling (selectionSort, list, N, STARTING_SAMPLES);
+	sortProfiling (quickSort, list, N, STARTING_SAMPLES);
 
 	delete list;
 	return 0;
