@@ -17,8 +17,8 @@ int main(int argc, char **argv) {
 	int val;
 	clock_t begin;
 	pNode p = nullptr;
-	bool show_all = true;  // toggle the way of showing values 
-	
+	bool show_all = true;  // toggle the way of showing values
+
 	// Use setvbuf() to prevent the output from buffered on console.
 	setvbuf(stdin,  NULL, _IONBF, 0);
 	setvbuf(stdout, NULL, _IONBF, 0);
@@ -30,8 +30,8 @@ int main(int argc, char **argv) {
 		cout << "\ti - push*      O(n)\n";
 		cout << "\tp - pop front  O(1)\n";
 		cout << "\ty - pop back   O(n)\n";
-		cout << "\td - pop*       O(n)\n"; 
-		cout << "\tc - clear      O(n)\n\n";			
+		cout << "\td - pop*       O(n)\n";
+		cout << "\tc - clear      O(n)\n\n";
 		if (show_all)
 			cout << "\tt - show* [ALL]\n";
 		else
@@ -75,8 +75,8 @@ int main(int argc, char **argv) {
 
 
 		case 't': // toggle the way of showing
-			show_all ? show_all = false : show_all = true; 
-			break;		
+			show_all ? show_all = false : show_all = true;
+			break;
 		case 'c':
 			if (empty(p)) break;
 			p = clear(p);
