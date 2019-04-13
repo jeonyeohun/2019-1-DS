@@ -33,3 +33,4 @@ Temporary Items
 # End of https://www.gitignore.io/api/macos
 psets/.DS_Store
 psets/pset07listnode/a.out
+psets/.DS_Store

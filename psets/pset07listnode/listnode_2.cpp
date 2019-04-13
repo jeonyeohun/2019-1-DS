@@ -59,9 +59,18 @@ bool empty(pNode p) {
 pNode push_front(pNode p, int val) {
 	DPRINT(cout << "><push_front val=" << val << endl;);
 	if (empty(p)){
-		return new Node{val, nullptr};
+		pNode node = new Node;
+		node->item = val;
+		node->next = nullptr;
+		return node;
 	}
-	return new Node{val, p};
+
+	pNode node = new Node;
+	node->item = val;
+	node->next = p;
+	p=node;
+
+	return p;
 }
 
 // adds a new node with val at the end of the list and returns the
@@ -69,12 +78,30 @@ pNode push_front(pNode p, int val) {
 pNode push_back(pNode p, int val) {
 	DPRINT(cout << "><push_back val=" << val << endl;);
 	if (empty(p)){
-		return new Node{val, nullptr};
+		p = new Node;
+		p->item = val;
+		p->next = nullptr;
+		return p;
 	}
 
 	// 새로운 노드 생성 및 초기화 //
-	pNode node = new Node{val, nullptr};
-	last(p)->next = node;
+	pNode node = new Node;
+	node->item = val;
+	node->next = nullptr;
+	/*
+	// 가장 끝에 있는 리스트를 찾기위한 포인터 //
+	pNode tail = p;
+	while(tail->next != nullptr){
+		tail=tail->next;
+	}
+	// 새로 만든 노드를 가장 끝에 있는 노드와 연결 //
+	tail->next = node;
+	*/
+
+	// 교수님이 만들어주신 함수 쓰면 위에처럼 할 일도 없다,,//
+	pNode tail;
+	tail = last(p);
+	tail->next = node;
 	// 첫번째 노드 리턴 //
 	return p;
 }
@@ -89,7 +116,9 @@ pNode push(pNode p, int val, int x) {
 
 	pNode curr = p;
 	pNode prev = nullptr;
-	pNode node = new Node{val, nullptr};
+	pNode node = new Node;
+	node->item = val;
+	node->next = nullptr;
 
 	while(curr->item != x){
 		prev = curr;
