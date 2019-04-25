@@ -23,11 +23,13 @@ pNode clear(pNode p) {
 	DPRINT(cout << "clear: ";);
 
 	pNode curr = p;
+	pNode prev = p;
 	while (curr != nullptr) {
-		pNode prev = curr;
+		prev = curr;
 		curr = curr->next;
 		cout << prev->item << " ";
 		delete prev;
+cout << prev->item << " ";
 	}
 	cout << "\tcleard \tHappy Coding~~\n";
 	return nullptr;
