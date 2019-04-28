@@ -166,7 +166,7 @@ void pop(pList p, int val) {
 void pop_all(pList p, int val) {
 	DPRINT(cout << ">pop_all val=" << val << endl;);
 	pNode x = p->head;
-	while(x->next != p->tail){
+	while(x != p->tail){
 		if (x->item == val){
 			erase(x);
 		}
