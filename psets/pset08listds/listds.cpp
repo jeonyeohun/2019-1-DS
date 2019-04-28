@@ -152,7 +152,7 @@ void pop_back(pList p) {
 // the value given.
 void pop(pList p, int val) {
 	DPRINT(cout << ">pop val=" << val << endl;);
-	cout << "your code here\n";
+
 
 	DPRINT(cout << "<pop\n";);
 }
@@ -207,9 +207,7 @@ void push_back(pList p, int val) {
 // This effectively increases the container size by one.
 void push(pList p, int val, int x) {
 	DPRINT(cout << ">push val=" << val << endl;);
-	pNode m;
-	m = find(p, x);
-	insert(m, val);
+	insert(find(p, x), val);
 	DPRINT(cout << "<push\n";);
 }
 
