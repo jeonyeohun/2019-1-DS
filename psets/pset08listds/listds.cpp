@@ -272,17 +272,17 @@ void reverse(pList p) {
 
 	pNode curr = p->head;
 	pNode temp;
-	while(curr -> next != p->tail){
-		temp = curr->head;
-		curr->head = curr->tail;
-		curr->tail = temp;
+	while(curr->next != p -> tail){
+		temp = curr->next;
+		curr->next = curr->prev;
+		curr->prev = temp;
 
-		curr = curr->next;
+		curr = temp;
 	}
 
 	temp = p->head;
 	p->head = p->tail;
-	p->tail = p->head;
+	p->tail = temp;
 
 	DPRINT(cout << "<reverse\n";);
 }
