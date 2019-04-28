@@ -96,19 +96,20 @@ void bubbleSort2(pList p, int(*comp)(int, int)) {
 
 void selectionSort(pList p, int(*comp)(int, int)) {
 	DPRINT(cout << ">selectionSort N=" << size(p) << endl;);
-	int min, temp;
-	for(pNode i = begin(p); i != end(p)->prev ; i=i->next){
-		min = i->item;
-		for (pNode j = i->next ; i != end(p) ; j=j->next){
+	pNode min;
+	int temp;
+	for(pNode i = begin(p); i != last(p) ; i=i->next){
+		min = i;
+		for (pNode j = i->next ; j != last(p)->next ; j=j->next){
 			if (j->item < min->item){
-				min = j->item;
+				min = j;
 			}
-			temp = i->item;
-			i->item = min;
-			min = temp;
-
 		}
+		temp = i->item;
+		i->item = min->item;
+		min->item = temp;
 	}
+
 
 	DPRINT(cout << "<selctionSort N=" << size(p) << endl;);
 }
