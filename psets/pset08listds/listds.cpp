@@ -155,7 +155,6 @@ void pop(pList p, int val) {
 
 	erase(p, find(p, val));
 
-
 	DPRINT(cout << "<pop\n";);
 }
 
@@ -166,7 +165,13 @@ void pop(pList p, int val) {
 // first node with the value given.
 void pop_all(pList p, int val) {
 	DPRINT(cout << ">pop_all val=" << val << endl;);
-	cout << "your code here\n";
+	pNode x = p->head;
+	while(x->next != p->tail){
+		if (x->item == val){
+			erase(x);
+		}
+		x=x->next;
+	}
 	DPRINT(cout << "<pop_all\n";);
 }
 
