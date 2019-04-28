@@ -45,10 +45,12 @@ pNode last(pList p) {
 // For even numbers, it returns the first node of the second half.
 // For example, for list [0, 1, 2, 3, 4, 5, 6, 7], it returns 4.
 pNode half(pList p) {
-
-	cout << "your code here. ";
-
-	return nullptr;
+	int N = size(p);
+	pNode x = begin(p);
+	for (int i=0 ; i<N/2 ; i++){
+		x=x->next;
+	}
+	return x;
 }
 
 // returns the first node with val found, the tail sentinel node
@@ -247,8 +249,12 @@ void unique(pList p) {
 	DPRINT(cout << ">unique N=" << size(p) << endl;);
 	if (size(p) <= 1) return;
 
-	cout << "your code here\n";
+	for (pNode c = begin(p) ; c != end(p) ; c = c->next){
+		if (c->item == c->prev->item){
+			erase(c);
+		}
 
+	}
 	DPRINT(cout << "<unique";);
 }
 
@@ -264,7 +270,19 @@ void reverse(pList p) {
 	// then, swap head and tail.
 	// hint: use while loop, don't use begin()/end()
 
-	cout << "your code here\n";
+	pNode curr = p->head;
+	pNode temp;
+	while(curr -> next != p->tail){
+		temp = curr->head;
+		curr->head = curr->tail;
+		curr->tail = temp;
+
+		curr = curr->next;
+	}
+
+	temp = p->head;
+	p->head = p->tail;
+	p->tail = p->head;
 
 	DPRINT(cout << "<reverse\n";);
 }
@@ -329,7 +347,14 @@ bool sorted(pList p, int(*comp)(int a, int b)) {
 	DPRINT(cout << ">sorted?\n";);
 	if (size(p) <= 1) return true;
 
-	cout << "your code here\n";
+	pNode curr = begin(p);
+	while(curr->next != end(p)){
+			if(comp(curr->item, curr->next->item) > 0){
+				return false;
+			}
+			curr = curr->next;
+	}
+
 
 	DPRINT(cout << "<sorted: true\n";);
 	return true;
@@ -338,7 +363,15 @@ bool sorted(pList p, int(*comp)(int a, int b)) {
 // inserts a node with val in sorted in the "sorted" list. O(n)
 void push_sorted(pList p, int val) {
 	DPRINT(cout << "<push_sorted val=" << val << endl;);
-	cout << "your code here\n";
+	pNode curr;
+	if (sorted(p, ascending) == true){
+		curr = _more(p, val);
+		insert(curr, val);
+	}
+	else if (sorted(p, descending) == true){
+		curr = _less(p, val);
+		insert(curr, val);
+	}
 	DPRINT(cout << "<push_sorted\n";);
 }
 
@@ -357,7 +390,19 @@ void push_sortedN(pList p, int N) {
 	bool upsorted = sorted(p, ascending);
 	srand((unsigned)time(NULL));	// initialize random seed
 
-	cout << "your code here\n";
+
+	pNode curr;
+	for (int i=0 ; i<N ; i++){
+		int val = rand()%range;
+		if(upsorted == true){
+			curr = _more(p, val);
+			insert(curr, val);
+		}
+		else{
+			curr = _less(p, val);
+			insert(curr, val);
+		}
+	}
 
 	DPRINT(cout << "<push_sortedN\n";);
 }
