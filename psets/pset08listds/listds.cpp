@@ -153,6 +153,8 @@ void pop_back(pList p) {
 void pop(pList p, int val) {
 	DPRINT(cout << ">pop val=" << val << endl;);
 
+	erase(p, find(p, val));
+
 
 	DPRINT(cout << "<pop\n";);
 }
