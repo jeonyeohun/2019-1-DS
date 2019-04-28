@@ -47,7 +47,7 @@ void _quickSort(pNode lo, pNode hi) {
 
 // quick sort algorithm, comp() is not implemented yet.
 void quickSort(pList head, int(*comp)(int, int)) {
-	_quickSort(begin(head), last(head));  
+	_quickSort(begin(head), last(head));
 }
 
 void bubbleSort(pList p, int(*comp)(int, int)) {
@@ -96,13 +96,24 @@ void bubbleSort2(pList p, int(*comp)(int, int)) {
 
 void selectionSort(pList p, int(*comp)(int, int)) {
 	DPRINT(cout << ">selectionSort N=" << size(p) << endl;);
+	int min, temp;
+	for(pNode i = begin(p); i != end(p)->prev ; i=i->next){
+		min = i->item;
+		for (pNode j = i->next ; i != end(p) ; j=j->next){
+			if (j->item < min->item){
+				min = j->item;
+			}
+			temp = i->item;
+			i->item = min;
+			min = temp;
 
-	cout << "your code here\n";
+		}
+	}
 
 	DPRINT(cout << "<selctionSort N=" << size(p) << endl;);
 }
 
-/** for your reference 
+/** for your reference
 void selectionSort(int *list, int n) {
 	int min;
 	for (int i = 0; i < n - 1; i++) {
@@ -116,4 +127,3 @@ void selectionSort(int *list, int n) {
 	}
 }
 */
-
