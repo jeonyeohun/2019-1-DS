@@ -14,7 +14,7 @@ using namespace std;
 
 // This function takes last element as pivot, places the pivot element at its
 // correct position in sorted array, and places all smaller (smaller than pivot)
-// to left of pivot and all greater elements to right of pivot 
+// to left of pivot and all greater elements to right of pivot
 pNode partition(pNode lo, pNode hi, int(*comp)(int, int) = ascending) {
 	int x = hi->item;     // set pivot as hi value
 	pNode i = lo->prev;   // Index of smaller element
@@ -93,12 +93,24 @@ void bubbleSort2(pList p, int(*comp)(int, int)) {
 void selectionSort(pList p, int(*comp)(int, int)) {
 	DPRINT(cout << ">selectionSort N=" << size(p) << endl;);
 
-	cout << "your code here\n";
+	pNode min;
+	int temp;
+	for(pNode i = begin(p); i != last(p) ; i=i->next){
+		min = i;
+		for (pNode j = i->next ; j != last(p)->next ; j=j->next){
+			if (j->item < min->item){
+				min = j;
+			}
+		}
+		temp = i->item;
+		i->item = min->item;
+		min->item = temp;
+	}
 
 	DPRINT(cout << "<selctionSort N=" << size(p) << endl;);
 }
 
-/** for your reference 
+/** for your reference
 void selectionSort(int *list, int n) {
 	int min;
 	for (int i = 0; i < n - 1; i++) {
@@ -112,4 +124,3 @@ void selectionSort(int *list, int n) {
 	}
 }
 */
-
