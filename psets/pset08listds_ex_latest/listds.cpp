@@ -174,8 +174,9 @@ void pop_all(pList p, int val) {
 	// O(n)
 	for (pNode c = begin(p); c != end(p); c = c->next) {
 		if(c->item == val){
+            pNode temp = c->prev;
 			erase(c);
-			c=c->prev;
+            c = temp;
 		}
 	}
 #endif
@@ -274,8 +275,9 @@ void unique(pList p) {
 
 	for (pNode c = begin(p) ; c != end(p) ; c = c->next){
 		if (c->item == c->prev->item){
+            pNode temp = c->prev;
 			erase(c);
-			c = c->prev;
+            c = temp;
 		}
 	}
 
@@ -293,33 +295,24 @@ void reverse(pList p) {
 	// hint: swap prev and next in every node including head & tail
 	// then, swap head and tail.
 	// hint: use while loop, don't use begin()/end()
-	int i=0;
-	for (pNode c = begin(p) ; c != end(p) ; c=c->prev){
-		cout << i++ << "번째 노드 변경" << endl;
-		pNode temp = c->prev;
+    pNode c = begin(p);
+    pNode temp;
+    while(c != end(p)){
+		temp = c->prev;
 		c->prev = c->next;
 		c->next = temp;
+        
+        c = c->prev;
 	}
-
-
-
-	cout << "시작: " << begin(p)->item<< endl;
-	cout << "끝: " << last(p) -> item<< endl;
-
-	pNode curr;
-	for (curr = begin(p); curr != end(p); curr = curr->prev) {
-		cout << " -> " << curr->item;
-	}
-	pNode temp = p->tail->next;
-	p->tail->next = p->head->next;
-	p->head->prev = temp;
-
-
-	p->head->next = p->tail->prev = nullptr;
-
-
-
-	DPRINT(cout << "<reverse\n";);
+    
+    temp = p->head->next;
+    p->tail->prev->next = p->head;
+    p->head->next->prev = p->tail;
+    p->head->next = p->tail->prev;
+    p->tail->prev = temp;
+    
+    
+    DPRINT(cout << "<reverse\n";);
 }
 
 // returns so called "perfectly shuffled" list.
@@ -424,18 +417,14 @@ void push_sortedN(pList p, int N) {
 #if 1
 	// O(n^2) implment your code here for O(n^2)
 	// Refer to push_sorted(), but don't invoke push_sorted().
-
 	pNode (*fp) (pList, int);
-	if (sorted(p, ascending))
-		fp = _more;
-	else
-		fp = _less;
+	if (sorted(p, ascending)) fp = _more;
+	else fp = _less;
 
 	for (int i = 0; i < N; i++) {
-		int val = rand()% range;
-		pNode node = fp(p, val);
-		insert(node, val);
-		}
+        int val = rand()% range;
+		insert(fp(p, val), val);
+    }
 #endif
 
 #if 0
