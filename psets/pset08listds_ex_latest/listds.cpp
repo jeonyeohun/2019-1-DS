@@ -295,22 +295,19 @@ void reverse(pList p) {
 	// hint: swap prev and next in every node including head & tail
 	// then, swap head and tail.
 	// hint: use while loop, don't use begin()/end()
-    pNode c = begin(p);
+    pNode c = p->head;
     pNode temp;
-    while(c != end(p)){
-		temp = c->prev;
-		c->prev = c->next;
-		c->next = temp;
+    while(c != nullptr){
+		temp = c->next;
+		c->next = c->prev;
+        c->prev = temp;
         
         c = c->prev;
 	}
     
-    temp = p->head->next;
-    p->tail->prev->next = p->head;
-    p->head->next->prev = p->tail;
-    p->head->next = p->tail->prev;
-    p->tail->prev = temp;
-    
+    temp = p->head;
+    p->head = p->tail;
+    p->tail = temp;
     
     DPRINT(cout << "<reverse\n";);
 }
