@@ -1,3 +1,6 @@
+/*  Include the following line at the top of your every file with your name signed. On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment. Signed: Yeo Hun Jeon
+ */
+
 /**
 * File: listdsx.cpp, listds.h
 *       implements a doubly linked list with sentinel nodes
@@ -12,6 +15,8 @@
 * 2. It does not implment C++ iterator (which is deprecated), but simulated
 *    most of memeber functions defined in std::List.
 */
+
+
 
 #include <iostream>
 #include <cassert>
@@ -332,12 +337,26 @@ void shuffle(pList p) {
 	// interleave nodes in the "que" into "mid" in the list of p.
 	// start inserting 1st node in "que" at 2nd node in "mid".
 
+    // Step 1 : find the mid node of the list p to split into two lists//
     pNode mid = half(p);
     pNode que = begin(p);
     
+    // Step 2 : remove the 1st half from the list p, and keep it as a list "que"//
+    pNode x = begin(p);
+    while(x->next != mid){ x = x->next; }
+    x->next = nullptr;
     
+    // Step 3 : set the list p head such that it points the mid of the list p//
+    p->head->next = mid;
+    mid->prev = p->head;
     
-
+    // Step 4 : keep on interleavnig nodes until the "que" is exhausted
+    mid = mid->next;
+    while(que != nullptr){
+        insert (mid, que->item);
+        mid = mid->next;
+        que = que->next;
+    }
 	DPRINT(cout << "<shuffle\n";);
 }
 
