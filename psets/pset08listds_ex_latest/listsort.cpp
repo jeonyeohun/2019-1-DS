@@ -31,6 +31,8 @@ pNode partition(pNode lo, pNode hi, int(*comp)(int, int) = ascending) {
 	return i;
 }
 
+/*  Include the following line at the top of your every file with your name signed. On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment. Signed: Yeo Hun Jeon
+ */
 // quickSort helper function for recursive operation
 // list[]: array to be sorted, lo: Starting index, h: Ending index
 // N is added only for debugging or DPRINT
