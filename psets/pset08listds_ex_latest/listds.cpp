@@ -494,8 +494,43 @@ void push_sortedNlog(pList p, int N) {
 	int range = N + psize;
 	int* vals = new int[N];
 
-	cout << "your code here\n";
-
+    // Step 1 : Generate N numbers to insert //
+    for (int i=0 ; i<N ; i++){
+        vals[i] = rand()%range;
+    }
+    // Step 2 : Sort vals using quicksort() of which time complexity is O(n log n)
+    if (sorted(p, ascending))
+        quickSort(vals, N);
+    else
+        quickSort(vals, N, descending);
+    
+    // Step 3 : Merge two lists //
+    pNode x = begin(p);
+    int i = 0;
+    if (sorted(p, ascending)){
+        while(x != end(p)){
+            if (vals[i] < x->item){
+                insert(x, vals[i]);
+                i++;
+            }
+            else{ x = x->next;}
+        }
+    }
+    else{
+        while(x != end(p)){
+            if (vals[i] > x->item){
+                insert(x, vals[i]);
+                i++;
+            }
+            else{ x = x->next;}
+        }
+    }
+    if (i < N){
+        for ( ; i<N ; i++)
+            insert(end(p), vals[i]);
+    }
+    
+    
 	delete[] vals;
 	DPRINT(cout << "<push_sortedNlog\n";);
 }
