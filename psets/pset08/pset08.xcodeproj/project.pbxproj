@@ -266,6 +266,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
+				GCC_PREPROCESSOR_DEFINITIONS = "";
 				HEADER_SEARCH_PATHS = "/Users/yeohunjeon/Desktop/2019-1/DS/include";
 				LIBRARY_SEARCH_PATHS = "/Users/yeohunjeon/Desktop/2019-1/DS/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
