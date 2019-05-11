@@ -1,3 +1,6 @@
+/*On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+	Signed: Yeo Hun Jeon Section: 03 Student Number: 21500630
+*/
 /**
 * File: tree.cpp, tree.h
 * implements a binary tree and/or binary search tree(BST).* and
@@ -36,7 +39,7 @@
 #include <cassert>
 #include <vector>
 #include "tree.h"
-#include "treeque.h"		    // used only in levelorder
+//#include "treeque.h"		    // used only in levelorder
 using namespace std;
 
 void treeprint(tree t);        // print the tree on console graphically
@@ -56,9 +59,15 @@ int height(tree node) {
 	if (empty(node)) return 0;
 	// compute the depth of each subree and return the larger one.
 
-	cout << "your code here\n";
+	int height = 0;
+	while(node != nullptr){
+		if (node->left == nullptr) node=node->right;
+		else if (node->right == nullptr) 		node=node->left;
+		else node=node->left;
+		height++;
+	}
 
-	return 0;
+	return height;
 }
 
 // Computes the size of the binary tree dyamically by
@@ -67,8 +76,8 @@ int size(tree node) {
 	if (node == nullptr) return 0;
 
 	cout << "your code here\n";
-	
-	return 1; 
+
+	return 1;
 }
 
 bool empty(tree t) {
@@ -83,7 +92,7 @@ int value(tree t) {
 // frees all nodes while traversing the tree like postorder
 tree clear(tree t) {
 	if (t == nullptr) return nullptr;
-	
+
 	cout << "your code here\n";
 
 	return nullptr;
@@ -94,9 +103,9 @@ tree clear(tree t) {
 bool contains(tree node, int key) {
 	if (empty(node)) return false;
 
-	cout << "your code here\n";
-
-	return true;
+	if (key == node -> key) return true;
+	if (key < node ->key) return contains (node -> left, key);
+	return contains(node->right, key);
 }
 
 // does there exist a node with given key?
@@ -213,7 +222,7 @@ tree minimum(tree node) {			// returns min node
 }
 
 // Given a binary tree, its node values in inorder are passed
-// back through the argument v which is passed by reference. 
+// back through the argument v which is passed by reference.
 void inorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">inorder size=" << v.size() << endl;);
 	cout << "your code here\n";
@@ -221,7 +230,7 @@ void inorder(tree node, vector<int>& v) {
 }
 
 // Given a binary tree, its node values in postorder are passed
-// back through the argument v which is passed by reference. 
+// back through the argument v which is passed by reference.
 void postorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">postorder size=" << v.size() << endl;);
 	cout << "your code here\n";
@@ -229,7 +238,7 @@ void postorder(tree node, vector<int>& v) {
 }
 
 // Given a binary tree, its node values in preorder are passed
-// back through the argument v which is passed by reference. 
+// back through the argument v which is passed by reference.
 void preorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">preorder size=" << v.size() << endl;);
 	cout << "your code here\n";
@@ -237,7 +246,7 @@ void preorder(tree node, vector<int>& v) {
 }
 
 // Given a binary tree, its nodes in level-order is passed
-// back through the argument v which is passed by reference. 
+// back through the argument v which is passed by reference.
 // Use std::queue to store the nodes during traverse the tree.
 void levelorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">levelorder";);
@@ -263,7 +272,7 @@ bool _isBST(tree x, int min, int max) {
 	return false;
 }
 
-// returns true if the tree is a binary search tree, otherwise false.  
+// returns true if the tree is a binary search tree, otherwise false.
 bool isBST(tree root) {
 	if (empty(root)) return true;
 
@@ -352,7 +361,7 @@ tree growN(tree root, int N, bool AVLtree) {
 // It gets N node keys from the tree, trim one by one randomly.
 tree trimN(tree root, int N, bool AVLtree) {
 	DPRINT(cout << ">trimN N=" << N << endl;);
-	vector<int> vec; 
+	vector<int> vec;
 	inorder(root, vec);
 	shuffle(vec.data(), vec.size());
 
@@ -511,5 +520,3 @@ tree trimAVL(tree node, int key) {
 		cout << "<trimAVL key=" << key << " is done, now rebalance at " << node->key << endl;);
 	return rebalance(node);
 }
-
-
