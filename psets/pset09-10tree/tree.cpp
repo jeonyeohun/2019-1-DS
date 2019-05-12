@@ -1,6 +1,3 @@
-/*On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
-	Signed: Yeo Hun Jeon Section: 03 Student Number: 21500630
-*/
 /**
 * File: tree.cpp, tree.h
 * implements a binary tree and/or binary search tree(BST).* and
@@ -38,6 +35,7 @@
 #include <iostream>
 #include <cassert>
 #include <vector>
+#include <queue>
 #include "tree.h"
 //#include "treeque.h"		    // used only in levelorder
 using namespace std;
@@ -58,16 +56,11 @@ int degree(tree t) {
 int height(tree node) {
 	if (empty(node)) return 0;
 	// compute the depth of each subree and return the larger one.
-
-	int height = 0;
-	while(node != nullptr){
-		if (node->left == nullptr) node=node->right;
-		else if (node->right == nullptr) 		node=node->left;
-		else node=node->left;
-		height++;
-	}
-
-	return height;
+	int leftmax=0;
+	int rightmax=0;
+	leftmax = height(node->left)+1;
+	rightmax = height(node->right)+1;
+	return leftmax > rightmax ? leftmax : rightmax;
 }
 
 // Computes the size of the binary tree dyamically by
@@ -75,9 +68,7 @@ int height(tree node) {
 int size(tree node) {
 	if (node == nullptr) return 0;
 
-	cout << "your code here\n";
-
-	return 1;
+	return 1+ size(node->left) + size(node->right);
 }
 
 bool empty(tree t) {
@@ -93,8 +84,9 @@ int value(tree t) {
 tree clear(tree t) {
 	if (t == nullptr) return nullptr;
 
-	cout << "your code here\n";
-
+	clear(t->left);
+	clear(t->right);
+	delete(t);
 	return nullptr;
 }
 
@@ -103,9 +95,11 @@ tree clear(tree t) {
 bool contains(tree node, int key) {
 	if (empty(node)) return false;
 
-	if (key == node -> key) return true;
-	if (key < node ->key) return contains (node -> left, key);
-	return contains(node->right, key);
+	if (node->key == key) return true;
+	contains(node->right, key);
+	contains(node->left, key);
+
+	return false;
 }
 
 // does there exist a node with given key?
@@ -212,20 +206,23 @@ tree pred(tree node) {
 // Given a binary search tree, return the min or max key in the tree.
 // Don't need to traverse the entire tree.
 tree maximum(tree node) {			// returns max node
-	cout << "your code here\n";
-	return nullptr;
+	while(node->right != nullptr) node = node->right;
+	return node;
 }
 
 tree minimum(tree node) {			// returns min node
-	cout << "your code here\n";
-	return nullptr;
+	while(node->left != nullptr) node = node->left;
+	return node;
 }
 
 // Given a binary tree, its node values in inorder are passed
 // back through the argument v which is passed by reference.
 void inorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">inorder size=" << v.size() << endl;);
-	cout << "your code here\n";
+	if (node == nullptr) return;
+	inorder(node->left, v);
+	v.push_back(node->key);
+	inorder(node->right, v);
 	DPRINT(cout << "<inorder key=" << node->key << endl;);
 }
 
@@ -233,7 +230,10 @@ void inorder(tree node, vector<int>& v) {
 // back through the argument v which is passed by reference.
 void postorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">postorder size=" << v.size() << endl;);
-	cout << "your code here\n";
+	if (node == nullptr) return;
+	postorder(node->left, v);
+	postorder(node->right, v);
+	v.push_back(node->key);
 	DPRINT(cout << "<postorder key=" << node->key << endl;);
 }
 
@@ -241,7 +241,10 @@ void postorder(tree node, vector<int>& v) {
 // back through the argument v which is passed by reference.
 void preorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">preorder size=" << v.size() << endl;);
-	cout << "your code here\n";
+	if (node == nullptr) return;
+	v.push_back(node->key);
+	preorder(node->left, v);
+	preorder(node->right, v);
 	DPRINT(cout << "<preorder key=" << node->key << endl;);
 }
 
@@ -250,9 +253,20 @@ void preorder(tree node, vector<int>& v) {
 // Use std::queue to store the nodes during traverse the tree.
 void levelorder(tree node, vector<int>& v) {
 	DPRINT(cout << ">levelorder";);
+	queue<tree> q;
+	tree t;
 	if (node == nullptr) return;
+	if (node != nullptr) q.push(node);
 
-	cout << "your code here\n";
+	while(!q.empty()){
+		t = q.front();
+		v.push_back(t->key);
+		if (t->left != nullptr) q.push(t->left);
+		if (t->right != nullptr) q.push(t->right);
+
+		q.pop();
+	}
+
 
 	DPRINT(cout << "<levelorder size=" << v.size() << endl;);
 }
@@ -266,10 +280,15 @@ bool _isBST(tree x, int min, int max) {
 	if (x == nullptr) return true;
 	DPRINT(cout << ">_isBST key=" << x->key << "\t min=" << min << " max=" << max << endl;);
 
-	cout << "your code here\n";
+	vector<int> v;
+	inorder(x, v);
+
+	for (int i=0 ; i<size(x)-1 ; i++){
+		if (v[i]>v[i+1]) return false;
+	}
 
 	DPRINT(cout << "<_isBST key=" << x->key << "\t min=" << min << " max=" << max << endl;);
-	return false;
+	return true;
 }
 
 // returns true if the tree is a binary search tree, otherwise false.
