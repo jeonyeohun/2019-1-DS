@@ -1,3 +1,6 @@
+/*On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment.
+• Signed: Jeon Yeo Hun Section: 03 Student Number: 21500630
+*/
 /**
 * File: tree.cpp, tree.h
 * implements a binary tree and/or binary search tree(BST).* and
@@ -187,9 +190,7 @@ tree trim(tree root, int key) {
 			tree temp = root;
 			if (!root->left) root = root->right;
 			else root = root ->left;
-
 			delete (temp);
-			return root;
 		}
 		else{
 			root->key = succ(root)->key;
@@ -207,7 +208,40 @@ tree trimplus(tree root, int key) {
 	if (root == nullptr) return root;	 // base case
 	DPRINT(cout << ">trimplus: now we are at: " << root->key << endl;);
 
-	cout << "your code here\n";
+	// finding node contains the key //
+	if (key < root->key)
+		root->left = trimplus(root->left, key);
+	else if (key > root->key)
+		root->right = trimplus(root->right, key);
+
+
+	else {
+		// case 1 : if the node has no child nodes(if the node is leaf) //
+		if (!root->left && !root->right){
+			delete (root);
+			return nullptr;
+		}
+		// case 2 : if the node has one child node //
+		else if ((!root->left && root->right) || (root->left && !root->right)){
+			tree temp = root;
+			if (!root->left) root = root->right;
+			else root = root ->left;
+			delete (temp);
+		}
+		// case 3 : if the node has two child nodes //
+		else{
+			// if the height of left is bigger than that of right //
+			if (height(root->right) < height(root->left)){
+				root->key = pred(root)->key;
+				root->left = trimplus(root->left, pred(root)->key);
+			}
+			// if the height of right is bigger than that of left //
+			else{
+				root->key = succ(root)->key;
+				root->right = trimplus(root->right, succ(root)->key);
+			}
+		}
+	}
 
 	DPRINT(if (root != nullptr) cout << "<trimplus returns: key=" << root->key << endl;);
 	DPRINT(if (root == nullptr) cout << "<trimplus returns: nullptr)\n";);
