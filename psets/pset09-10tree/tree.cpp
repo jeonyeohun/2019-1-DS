@@ -156,6 +156,9 @@ tree grow(tree node, int key) {
 		node->left = grow(node->left, key);
 	else if (key > node->key)
 		node->right = grow(node->right, key);
+	else{
+		 cout << "grow: the same key " << key << " is ignored.\n";
+	}
 
 	// do nothing, the duplicate key is not allowed
 	DPRINT(cout << "<grow returns key=" << node->key << endl;);
@@ -173,21 +176,25 @@ tree trim(tree root, int key) {
 		root->left = trim(root->left, key);
 	else if (key > root->key)
 		root->right = trim(root->right, key);
-	else if (!root->left && !root->right){
-		delete (root);
-		return nullptr;
-	}
-	else if ((!root->left && root->right) || (root->left && !root->right)){
-		tree temp = root;
-		if (!root->left) root = root->right;
-		else root = root ->left;
 
-		delete (temp);
-		return root;
-	}
-	else{
-		root->key = succ(root)->key;
-		trim(root->right, succ(root)->key);
+
+	else {
+		if (!root->left && !root->right){
+			delete (root);
+			return nullptr;
+		}
+		else if ((!root->left && root->right) || (root->left && !root->right)){
+			tree temp = root;
+			if (!root->left) root = root->right;
+			else root = root ->left;
+
+			delete (temp);
+			return root;
+		}
+		else{
+			root->key = succ(root)->key;
+			root->right = trim(root->right, succ(root)->key);
+		}
 	}
 
 	DPRINT(if (root != nullptr) cout << "<trim returns: key=" << root->key << endl;);
