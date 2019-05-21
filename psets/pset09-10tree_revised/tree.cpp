@@ -427,10 +427,10 @@ tree growN(tree root, int N, bool AVLtree) {
 	assert(arr != nullptr);
 	randomN(arr, N, start);
 
-	// using a function pointer
-	tree(*func)(tree root, int key) = AVLtree ? growAVL : grow;
-	for (int i = 0; i < N; i++)
-		root = func(root, arr[i]);
+
+	for (int i = 0; i < N; i++) root = grow(root, arr[i]);
+
+	if (AVLtree) root = rebalanceTree(root);
 
 	delete[] arr;
 	DPRINT(cout << "<growN size=" << size(root) << endl;);
@@ -449,21 +449,11 @@ tree trimN(tree root, int N, bool AVLtree) {
 	assert(vec.size() == tsize);   // make sure we've got them all
 
 	int count = N > tsize ? tsize : N;
+	for (int i = 0; i < count; i++) root = trim(root, vec[i]);
 
-	/* instead of the following code
-	if (AVLtree)
-		for (int i = 0; i < count; i++)
-			root = trimAVL(root, vec[i]);
-	else
-		for (int i = 0; i < count; i++)
-			root = trim(root, vec[i]);
-	*/
-	// use function pointers
-	tree (*func)(tree root, int key) = AVLtree ? trimAVL : trim;
-	for (int i = 0; i < count; i++)
-		root = func(root, vec[i]);
-
+	if (AVLtree) root = rebalanceTree(root);
 	DPRINT(cout << "<trimN size=" << size(root) << endl;);
+
 	return root;
 }
 
@@ -532,15 +522,29 @@ tree rotateRL(tree node) {
 // returns the node that may be different from the input node
 tree rebalance(tree node) {
 	DPRINT(cout << ">rebalance at:" << node->key << endl;);
-
-	cout << "your code here\n";
-
-#ifdef DEBUG
+/*#ifdef DEBUG
 	treeprint(node);
 	cout << " Need rebalancing at " << node->key << endl;
-#endif
+#endif*/
 
-	cout << "your code here\n";
+	int bf = balanceFactor(node);
+	if(bf >=2 ){
+		if (balanceFactor(node->left) >= 2 || balanceFactor(node->left) <= -2)
+			node -> left = rebalance(node->left);
+		else if (balanceFactor(node->left) >= 1)
+			node = rotateLL(node);
+		else
+			node = rotateLR(node);
+	}
+	else if (bf <= -2){
+		if (balanceFactor(node->right) >= 2 || balanceFactor(node->right) <= -2)
+			node->right = rebalance(node->right);
+		else if (balanceFactor(node->right) <= -1)
+			node = rotateRR(node);
+		else
+			node = rotateRL(node);
+	}
+
 
 	DPRINT(cout << "<rebalance returning" << endl;);
 	return node;
@@ -567,12 +571,39 @@ tree rebalanceTree(tree node) { // may need a better solution here
 	DPRINT(cout << ">rebalanceTree " << endl;);
 	if (node == nullptr) return nullptr;
 
-	cout << "your code here\n";
+	vector<int> v;
+	inorder(node, v);
+	for (int s : v){
+		cout << s << " ";
+	}
+	tree new_root = buildAVL(v.data(), v.size());
 
 	DPRINT(cout << "<rebalanceTree " << endl;);
-	return node;
+	delete node;
+	return new_root;
+
 }
 
+// rebuilds an AVL tree with a list of keys sorted.
+// v – an array of keys sorted, n – the array size
+tree buildAVL (int* v, int n) {
+	cout<<v[0]<<","<<n<<endl;
+if (n <= 0) return nullptr;
+	// construct and set a TreeNode and initial values, use the [mid] element of v.
+int mid = n/2;
+tree root = new TreeNode(v[mid]);
+cout<<"build node:"<<v[mid]<<endl;
+
+	// your code here – recursive buildAVL() calls for left & right
+if(mid <= 0){
+	return root;
+};
+root->left = buildAVL(v, mid);
+root->right = buildAVL(&v[mid+1], n-mid-1);
+	// from 0 to mid-1 (or mid number of nodes)
+	// from mid+1 to the end (how many nodes?)
+return root;
+}
 
 #if 1
 // inserts a node in the AVL tree and rebalance it.
@@ -581,9 +612,12 @@ tree growAVL(tree node, int key) {
 	DPRINT(cout << ">growAVL key=" << key << endl;);
 	if (node == nullptr) return new TreeNode(key);
 
-	cout << "your code here\n";
+	if (key < node->key)	// recur down the tree
+		node->left = growAVL(node->left, key);
+	else if (key > node->key)
+		node->right = growAVL(node->right, key);
 
-	return nullptr;
+	return rebalance(node);
 }
 #endif
 
@@ -592,8 +626,7 @@ tree trimAVL(tree node, int key) {
 	DPRINT(cout << ">trimAVL key=" << key << " at " << node->key << endl;);
 
 	// step 1 - BST trim as usual
-
-	cout << "your code here\n";
+	trimN(node, key, isAVL(node));
 
 	// step 2 - get the balance factor of this node
 	DPRINT(if (node != nullptr)
