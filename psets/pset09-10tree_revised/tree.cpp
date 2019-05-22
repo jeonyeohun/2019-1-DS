@@ -1,4 +1,8 @@
 /**
+On my honour, I pledge that I have neither received nor provided improper assistance in the
+completion of this assignment.
+• Signed: Jeon Yeo Hun Section: 03  Student Number: 215000630
+
 * File: tree.cpp, tree.h
 * implements a binary tree and/or binary search tree(BST).* and
 * AVL(Adelson-Velskii and Landis) tree.
@@ -623,13 +627,34 @@ tree growAVL(tree node, int key) {
 
 // removes a node with key in the AVL tree and rebalance it.
 tree trimAVL(tree node, int key) {
-	DPRINT(cout << ">trimAVL key=" << key << " at " << node->key << endl;);
+	if (node == nullptr) return node;	 // base case
+	DPRINT(cout << ">trim: now we are at: " << node->key << endl;);
 
-	// step 1 - BST trim as usual
-	trimN(node, key, isAVL(node));
+	if (key < node->key)
+		node->left = trimAVL(node->left, key);
+	else if (key > node->key)
+		node->right = trimAVL(node->right, key);
 
+
+	else {
+		if (!node->left && !node->right){
+			delete (node);
+			return nullptr;
+		}
+		else if ((!node->left && node->right) || (node->left && !node->right)){
+			tree temp = node;
+			if (!node->left) node = node->right;
+			else node = node ->left;
+			delete (temp);
+		}
+		else{
+			node->key = succ(node)->key;
+			node->right = trimAVL(node->right, succ(node)->key);
+		}
+	}
 	// step 2 - get the balance factor of this node
 	DPRINT(if (node != nullptr)
 		cout << "<trimAVL key=" << key << " is done, now rebalance at " << node->key << endl;);
 	return rebalance(node);
+
 }
