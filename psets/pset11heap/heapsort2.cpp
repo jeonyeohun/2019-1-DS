@@ -130,7 +130,7 @@ void show(Key * a, int N) {
 
 // The first element(a[0]) is excluded.
 int main(int argc, char* argv[]) {
-#if 1
+#if 0
 	char a[] = { ' ', 'H', 'A', 'P', 'P', 'Y', 'C', 'O', 'D', 'I', 'N', 'G', '\0', '\0' };
 	int N = sizeof(a) / sizeof(a[0]) - 3;   // -3 because of 1st ' ' and last two'\0'.
 #else
