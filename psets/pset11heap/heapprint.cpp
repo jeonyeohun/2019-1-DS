@@ -14,9 +14,9 @@
 * 3. Loop until the queue is empty
 *    Get a next key from the CBT
 *    Get the front node in the queue.
-*    If the left child of this front node doesn¡¯t exist,
+*    If the left child of this front node doesnï¿½ï¿½t exist,
 *        set the left child as the new node.
-*	 else if the right child of this front node doesn¡¯t exist,
+*	 else if the right child of this front node doesnï¿½ï¿½t exist,
 *        set the right child as the new node.
 * 4. If the front node has both the left child and right child,
 *        dequeue() it.
@@ -26,6 +26,7 @@
 #include <iostream>
 #include <cassert>
 #include <queue>
+#include <cmath>
 #include "heap.h"
 #include "treenode.h"
 
@@ -33,9 +34,16 @@ void treeprint(tree t);
 
 void heapprint(heap p) {
 	DPRINT(std::cout << ">heapprint\n";);
+	queue <tree> q;
 	if (empty(p)) return;
+	tree root = p->node[0];
+	q.push(root);
 
-	std::cout << "your code here\n";
+	while(){
+		
+	}
+
+
 
 	// treeprint(root);
 

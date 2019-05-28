@@ -1,18 +1,18 @@
 /**
-* File: heapDriver.cpp 
+* File: heapDriver.cpp
 *	interactively tests the max or min priority queue that uses a heap.
-* 
-* Files: heap.cpp, heap.h, heapDriver.cpp :max/minheap 
+*
+* Files: heap.cpp, heap.h, heapDriver.cpp :max/minheap
 *
 * @author: Youngsup Kim, idebtor@gmail.com
 *  2014/04/01	Creation
 *  2016/11/01	begin with either CBT or Heap
 *  2016/11/15	command-line arguments available for initial heap
-*  2017/11/13   be able to toggle maxheap or minheap 
+*  2017/11/13   be able to toggle maxheap or minheap
 *  2019/04/04   C++ version
-* 
+*
 * Usage : You may specify initial keys of nodes as command-line arguments
-* 
+*
 * Good references about getopt() or pgetopt()
 * http://www.ibm.com/developerworks/aix/library/au-unix-getopt.html
 * https://www.cs.rutgers.edu/~pxk/416/notes/c-tutorials/getopt.html
@@ -35,7 +35,7 @@ heap build_heap_by_args(int argc, char* argv[]) {
 	int* bin = new (nothrow) int[argc];
 	assert(bin != nullptr);
 
-	for (int i = 0; i < (argc - 1); i++) 
+	for (int i = 0; i < (argc - 1); i++)
 		bin[i] = strtol(argv[i + 1], nullptr, 0);
 	heap hp = newCBT(bin, argc - 1);
 	// setType(hp, true);   // set maxheap
@@ -82,16 +82,16 @@ int main(int argc, char* argv[]) {
 	heap hp = argc <= 1 ? new Heap : build_heap_by_args(argc, argv);
 	setType(hp, maxType = true);
 	bool ordered = heapOrdered(hp);
-	
+
 	do {
 		heapprint_mode(hp, printMode);
 		menu = ordered ? (maxType ? menuMax : menuMin) : menuCBT;
 		cout << "\n\t" << menu << heapspecs(hp) << endl;
 		cout << "\tg - grow\t";		cout << "h - heapify\n";
 		cout << "\tt - trim\t";		cout << "s - heapsort\n";
-		cout << "\tr - replace\t";	cout << "o - heap-ordered?\n";	
+		cout << "\tr - replace\t";	cout << "o - heap-ordered?\n";
 		cout << endl;
-		cout << "\tx - grow N\t";	cout << "w - switch to CBT\n"; 
+		cout << "\tx - grow N\t";	cout << "w - switch to CBT\n";
 		cout << "\ty - trim N\t";	cout << "z - switch to [max/minheap]\n";
 		cout << "\tc - clear\t"; 	cout << "m - print mode[Tree/Level]\n";
 		c = GetChar("\tCommand(q to quit): ");
@@ -108,7 +108,7 @@ int main(int argc, char* argv[]) {
 
 		case 'r':  // replace
 			if (empty(hp)) break;
-			if (!ordered) break;  
+			if (!ordered) break;
 
 			while (1) {
 				oldKey = GetInt("\n\tSelect a key to replace: ");
@@ -125,7 +125,7 @@ int main(int argc, char* argv[]) {
 			ordered = true;
 			break;
 
-		case 's':	// heapsort 
+		case 's':	// heapsort
 			if (empty(hp)) break;
 			heapsort(hp);
 			maxType = maxType ? false : true;
@@ -142,7 +142,7 @@ int main(int argc, char* argv[]) {
 				cout << "\n\tNo, it is not heap-ordered.\n";
 			break;
 
-		case 'w':	// switch it to a complete binary tree 
+		case 'w':	// switch it to a complete binary tree
 			ordered = false;
 			break;
 
@@ -161,12 +161,12 @@ int main(int argc, char* argv[]) {
 			growN(hp, n, ordered);
 			break;
 
-		case 'y':	// trim N nodes randomly from heap or CBT  
+		case 'y':	// trim N nodes randomly from heap or CBT
 			n = GetInt("\n\tEnter a number of nodes to trim: ");
 			trimN(hp, n, ordered);
 			break;
 
-		case 'c':	// clear 
+		case 'c':	// clear
 			clear(hp);
 			hp = new Heap;
 			setType(hp, maxType);
@@ -181,4 +181,3 @@ int main(int argc, char* argv[]) {
 	clear(hp);
 	cout << "\tJoyful Coding^^\n";
 }
-
