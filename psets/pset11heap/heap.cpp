@@ -223,7 +223,7 @@ bool heapOrderedAt(heap p, int k) {
 
 // is this[1..N] heap ordered? 
 bool heapOrdered(heap p) {
-	if (empty(p)) return false;
+	if (empty(p)||p->N==1) return false;
 	return heapOrderedAt(p, 1);
 }
 
@@ -313,7 +313,7 @@ void heapify(heap p) {
 // returns an int array that has randomly mixed numbers
 // between start to start + N
 void randomN(int start, int N, int *arr) {
-    if (N <= 1) return;
+	if (N <= 1) return;
 	for (int i = 0; i < N; i++) arr[i] = start + i;
 	// shuffle the array contents
 	for (int i = 0; i < N; i++) {
