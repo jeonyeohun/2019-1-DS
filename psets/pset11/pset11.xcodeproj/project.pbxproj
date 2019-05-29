@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		B56B9D84229D58D300919FE5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9D7F229D58D300919FE5 /* heap.cpp */; };
-		B56B9D85229D58D300919FE5 /* treeprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9D80229D58D300919FE5 /* treeprint.cpp */; };
-		B56B9D86229D58D300919FE5 /* heapDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9D81229D58D300919FE5 /* heapDriver.cpp */; };
-		B56B9D88229D58D300919FE5 /* heapprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9D83229D58D300919FE5 /* heapprint.cpp */; };
 		B56B9D8D229D5AC200919FE5 /* libnowic_mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B56B9D8C229D5AC200919FE5 /* libnowic_mac.a */; };
+		B56B9DA3229E924200919FE5 /* heap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9D9F229E924200919FE5 /* heap.cpp */; };
+		B56B9DA4229E924200919FE5 /* heapDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9DA0229E924200919FE5 /* heapDriver.cpp */; };
+		B56B9DA5229E924200919FE5 /* heapprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9DA1229E924200919FE5 /* heapprint.cpp */; };
+		B56B9DA7229E925500919FE5 /* treeprint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B56B9DA6229E925500919FE5 /* treeprint.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,12 +28,12 @@
 
 /* Begin PBXFileReference section */
 		B56B9D75229D58BD00919FE5 /* pset11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pset11; sourceTree = BUILT_PRODUCTS_DIR; };
-		B56B9D7F229D58D300919FE5 /* heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heap.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heap.cpp; sourceTree = "<group>"; };
-		B56B9D80229D58D300919FE5 /* treeprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = treeprint.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/treeprint.cpp; sourceTree = "<group>"; };
-		B56B9D81229D58D300919FE5 /* heapDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heapDriver.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heapDriver.cpp; sourceTree = "<group>"; };
-		B56B9D83229D58D300919FE5 /* heapprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heapprint.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heapprint.cpp; sourceTree = "<group>"; };
 		B56B9D8A229D5AB100919FE5 /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; name = lib; path = ../../lib; sourceTree = "<group>"; };
 		B56B9D8C229D5AC200919FE5 /* libnowic_mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libnowic_mac.a; path = ../../lib/libnowic_mac.a; sourceTree = "<group>"; };
+		B56B9D9F229E924200919FE5 /* heap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heap.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heap.cpp; sourceTree = "<group>"; };
+		B56B9DA0229E924200919FE5 /* heapDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heapDriver.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heapDriver.cpp; sourceTree = "<group>"; };
+		B56B9DA1229E924200919FE5 /* heapprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = heapprint.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/heapprint.cpp; sourceTree = "<group>"; };
+		B56B9DA6229E925500919FE5 /* treeprint.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = treeprint.cpp; path = ../../../../DS_YSK/nowic/psets/pset11heap/treeprint.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,10 +68,10 @@
 		B56B9D77229D58BD00919FE5 /* pset11 */ = {
 			isa = PBXGroup;
 			children = (
-				B56B9D7F229D58D300919FE5 /* heap.cpp */,
-				B56B9D81229D58D300919FE5 /* heapDriver.cpp */,
-				B56B9D83229D58D300919FE5 /* heapprint.cpp */,
-				B56B9D80229D58D300919FE5 /* treeprint.cpp */,
+				B56B9D9F229E924200919FE5 /* heap.cpp */,
+				B56B9DA0229E924200919FE5 /* heapDriver.cpp */,
+				B56B9DA1229E924200919FE5 /* heapprint.cpp */,
+				B56B9DA6229E925500919FE5 /* treeprint.cpp */,
 			);
 			path = pset11;
 			sourceTree = "<group>";
@@ -141,10 +141,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B56B9D86229D58D300919FE5 /* heapDriver.cpp in Sources */,
-				B56B9D84229D58D300919FE5 /* heap.cpp in Sources */,
-				B56B9D85229D58D300919FE5 /* treeprint.cpp in Sources */,
-				B56B9D88229D58D300919FE5 /* heapprint.cpp in Sources */,
+				B56B9DA4229E924200919FE5 /* heapDriver.cpp in Sources */,
+				B56B9DA7229E925500919FE5 /* treeprint.cpp in Sources */,
+				B56B9DA5229E924200919FE5 /* heapprint.cpp in Sources */,
+				B56B9DA3229E924200919FE5 /* heap.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

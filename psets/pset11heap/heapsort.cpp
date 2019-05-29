@@ -1,4 +1,11 @@
 /** File: heapsort.cpp */
+
+/*
+ Include the following line at the top of your every file with your name signed.
+ On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment. Signed: Jeon, Yeo Hun
+ *
+ 
+ 
 /* This implements the heap sort algorithm (in-place).
 * A given arbitrary input array goes through two passes.
 * 1st pass: heap construction (heapify)

@@ -1,4 +1,11 @@
 /**
+ 
+ /*
+ Include the following line at the top of your every file with your name signed.
+ On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment. Signed: Jeon, Yeo Hun
+ *
+ 
+ 
 * File: heapprint.cpp
 *	converts a heap data structure in an array into a complete
 *	binary tree and invokes treeprint() in treeprint.cpp
@@ -14,9 +21,9 @@
 * 3. Loop until the queue is empty
 *    Get a next key from the CBT
 *    Get the front node in the queue.
-*    If the left child of this front node doesnï¿½ï¿½t exist,
+*    If the left child of this front node doesn¡¯t exist,
 *        set the left child as the new node.
-*	 else if the right child of this front node doesnï¿½ï¿½t exist,
+*	 else if the right child of this front node doesn¡¯t exist,
 *        set the right child as the new node.
 * 4. If the front node has both the left child and right child,
 *        dequeue() it.
@@ -34,17 +41,30 @@ void treeprint(tree t);
 
 void heapprint(heap p) {
 	DPRINT(std::cout << ">heapprint\n";);
-	queue <tree> q;
-	if (empty(p)) return;
-	tree root = p->node[0];
-	q.push(root);
-
-	while(){
-		
-	}
-
-
-
+    std::queue <tree> q;
+    if (empty(p)) return;
+    
+    int index=1;
+    
+    tree root = new TreeNode(p->nodes[index]);
+    q.push(root);
+    while(index < p->N){
+        tree newNode = new TreeNode(p->nodes[++index]);
+        tree queNode = q.front();
+        if (queNode->left == nullptr){
+            queNode->left = newNode;
+        }
+        else if (queNode->right == nullptr){
+            queNode->right = newNode;
+        }
+        if (queNode->left != nullptr && queNode->right != nullptr){
+            q.pop();
+        }
+        q.push(newNode);
+    }
+    treeprint(root);
+    
+    
 	// treeprint(root);
 
 	// treeprint_levelorder(root);  // may use this instead of heapprint_levelorder()
