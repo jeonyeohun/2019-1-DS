@@ -1,0 +1,1117 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B55FE13E22A178CD002FE28C /* graphDriver.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B55FE13D22A178CD002FE28C /* graphDriver.cpp */; };
+		B55FE25322A179AD002FE28C /* libnowic_mac.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B55FE24B22A1799F002FE28C /* libnowic_mac.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B55FE24E22A1799F002FE28C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55FE17A22A1799F002FE28C /* pset08.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B5094640227C4C92002E93EA;
+			remoteInfo = pset08;
+		};
+		B55FE25122A1799F002FE28C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B55FE1F722A1799F002FE28C /* pset11.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B56B9D75229D58BD00919FE5;
+			remoteInfo = pset11;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B55FE13122A1789D002FE28C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B55FE13322A1789D002FE28C /* pset12 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = pset12; sourceTree = BUILT_PRODUCTS_DIR; };
+		B55FE13D22A178CD002FE28C /* graphDriver.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = graphDriver.cpp; sourceTree = "<group>"; };
+		B55FE14322A1799F002FE28C /* lab04a.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab04a.cpp; sourceTree = "<group>"; };
+		B55FE14422A1799F002FE28C /* lab04b.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab04b.cpp; sourceTree = "<group>"; };
+		B55FE14522A1799F002FE28C /* lab04b.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = lab04b.exe; sourceTree = "<group>"; };
+		B55FE14622A1799F002FE28C /* lab04.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab04.md; sourceTree = "<group>"; };
+		B55FE14722A1799F002FE28C /* a.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = a.exe; sourceTree = "<group>"; };
+		B55FE14822A1799F002FE28C /* lab04a.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = lab04a.exe; sourceTree = "<group>"; };
+		B55FE14A22A1799F002FE28C /* lab03.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab03.md; sourceTree = "<group>"; };
+		B55FE14B22A1799F002FE28C /* lab03.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab03.cpp; sourceTree = "<group>"; };
+		B55FE14D22A1799F002FE28C /* lab04a.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab04a.cpp; sourceTree = "<group>"; };
+		B55FE14E22A1799F002FE28C /* lab04b.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab04b.cpp; sourceTree = "<group>"; };
+		B55FE14F22A1799F002FE28C /* lab04.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab04.md; sourceTree = "<group>"; };
+		B55FE15022A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE15222A1799F002FE28C /* lab05.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab05.md; sourceTree = "<group>"; };
+		B55FE15322A1799F002FE28C /* lab05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab05.cpp; sourceTree = "<group>"; };
+		B55FE15522A1799F002FE28C /* compiling_error.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = compiling_error.txt; sourceTree = "<group>"; };
+		B55FE15622A1799F002FE28C /* lab02.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab02.cpp; sourceTree = "<group>"; };
+		B55FE15722A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE15822A1799F002FE28C /* lab02.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab02.md; sourceTree = "<group>"; };
+		B55FE15A22A1799F002FE28C /* struct.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = struct.cpp; sourceTree = "<group>"; };
+		B55FE15B22A1799F002FE28C /* structx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = structx.exe; sourceTree = "<group>"; };
+		B55FE15C22A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE15D22A1799F002FE28C /* struct.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = struct.pdf; sourceTree = "<group>"; };
+		B55FE15F22A1799F002FE28C /* lab05.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab05.md; sourceTree = "<group>"; };
+		B55FE16022A1799F002FE28C /* lab05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab05.cpp; sourceTree = "<group>"; };
+		B55FE16222A1799F002FE28C /* lab01.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = lab01.md; sourceTree = "<group>"; };
+		B55FE16322A1799F002FE28C /* lab01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab01.cpp; sourceTree = "<group>"; };
+		B55FE16422A1799F002FE28C /* lab01driver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = lab01driver.cpp; sourceTree = "<group>"; };
+		B55FE16722A1799F002FE28C /* listdsDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listdsDriver.cpp; sourceTree = "<group>"; };
+		B55FE16822A1799F002FE28C /* listsort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listsort.cpp; sourceTree = "<group>"; };
+		B55FE16922A1799F002FE28C /* listdsx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = listdsx.exe; sourceTree = "<group>"; };
+		B55FE16A22A1799F002FE28C /* listds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listds.cpp; sourceTree = "<group>"; };
+		B55FE16B22A1799F002FE28C /* listdsx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = listdsx; sourceTree = "<group>"; };
+		B55FE16C22A1799F002FE28C /* pset08listds.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset08listds.pdf; sourceTree = "<group>"; };
+		B55FE16D22A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE16F22A1799F002FE28C /* listdsDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listdsDriver.cpp; sourceTree = "<group>"; };
+		B55FE17022A1799F002FE28C /* listsort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listsort.cpp; sourceTree = "<group>"; };
+		B55FE17122A1799F002FE28C /* listdsx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = listdsx.exe; sourceTree = "<group>"; };
+		B55FE17222A1799F002FE28C /* runningtime.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = runningtime.docx; sourceTree = "<group>"; };
+		B55FE17322A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE17422A1799F002FE28C /* listds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listds.cpp; sourceTree = "<group>"; };
+		B55FE17522A1799F002FE28C /* listdsx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = listdsx; sourceTree = "<group>"; };
+		B55FE17622A1799F002FE28C /* pset08listds.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset08listds.pdf; sourceTree = "<group>"; };
+		B55FE17722A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE17A22A1799F002FE28C /* pset08.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = pset08.xcodeproj; sourceTree = "<group>"; };
+		B55FE17E22A1799F002FE28C /* treeprint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = treeprint.cpp; sourceTree = "<group>"; };
+		B55FE17F22A1799F002FE28C /* heapx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = heapx.exe; sourceTree = "<group>"; };
+		B55FE18022A1799F002FE28C /* heapDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heapDriver.cpp; sourceTree = "<group>"; };
+		B55FE18122A1799F002FE28C /* pset_heap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset_heap.pdf; sourceTree = "<group>"; };
+		B55FE18222A1799F002FE28C /* heapx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = heapx; sourceTree = "<group>"; };
+		B55FE18322A1799F002FE28C /* heapsort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heapsort.cpp; sourceTree = "<group>"; };
+		B55FE18422A1799F002FE28C /* heap.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heap.cpp; sourceTree = "<group>"; };
+		B55FE18522A1799F002FE28C /* heapprint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = heapprint.cpp; sourceTree = "<group>"; };
+		B55FE18622A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE18722A1799F002FE28C /* heapsortx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = heapsortx.exe; sourceTree = "<group>"; };
+		B55FE18822A1799F002FE28C /* heapsortx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = heapsortx; sourceTree = "<group>"; };
+		B55FE18A22A1799F002FE28C /* treeprint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = treeprint.cpp; sourceTree = "<group>"; };
+		B55FE18B22A1799F002FE28C /* DebugTree */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = DebugTree; sourceTree = "<group>"; };
+		B55FE18C22A1799F002FE28C /* pset_tree.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset_tree.pdf; sourceTree = "<group>"; };
+		B55FE18D22A1799F002FE28C /* tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
+		B55FE18E22A1799F002FE28C /* treex.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = treex.exe; sourceTree = "<group>"; };
+		B55FE18F22A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE19022A1799F002FE28C /* treex */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = treex; sourceTree = "<group>"; };
+		B55FE19122A1799F002FE28C /* final */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = final; sourceTree = "<group>"; };
+		B55FE19222A1799F002FE28C /* treeDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = treeDriver.cpp; sourceTree = "<group>"; };
+		B55FE19422A1799F002FE28C /* listnode.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listnode.cpp; sourceTree = "<group>"; };
+		B55FE19522A1799F002FE28C /* listnodex.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = listnodex.exe; sourceTree = "<group>"; };
+		B55FE19622A1799F002FE28C /* listnode_2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listnode_2.cpp; sourceTree = "<group>"; };
+		B55FE19722A1799F002FE28C /* listnodeDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listnodeDriver.cpp; sourceTree = "<group>"; };
+		B55FE19822A1799F002FE28C /* listnode.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = listnode.pdf; sourceTree = "<group>"; };
+		B55FE19922A1799F002FE28C /* listnodex */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = listnodex; sourceTree = "<group>"; };
+		B55FE19A22A1799F002FE28C /* listnode */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = listnode; sourceTree = "<group>"; };
+		B55FE19C22A1799F002FE28C /* sort_functions.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = sort_functions.zip; sourceTree = "<group>"; };
+		B55FE19D22A1799F002FE28C /* sort */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sort; sourceTree = "<group>"; };
+		B55FE19E22A1799F002FE28C /* quick.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quick.cpp; sourceTree = "<group>"; };
+		B55FE19F22A1799F002FE28C /* sort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sort.cpp; sourceTree = "<group>"; };
+		B55FE1A022A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1A122A1799F002FE28C /* sortx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = sortx.exe; sourceTree = "<group>"; };
+		B55FE1A222A1799F002FE28C /* bubble.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bubble.cpp; sourceTree = "<group>"; };
+		B55FE1A322A1799F002FE28C /* 1.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = 1.c; sourceTree = "<group>"; };
+		B55FE1A422A1799F002FE28C /* insertion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = insertion.cpp; sourceTree = "<group>"; };
+		B55FE1A522A1799F002FE28C /* selection.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = selection.cpp; sourceTree = "<group>"; };
+		B55FE1A622A1799F002FE28C /* pset-extra1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "pset-extra1.pdf"; sourceTree = "<group>"; };
+		B55FE1A822A1799F002FE28C /* listdsDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listdsDriver.cpp; sourceTree = "<group>"; };
+		B55FE1A922A1799F002FE28C /* listsort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listsort.cpp; sourceTree = "<group>"; };
+		B55FE1AA22A1799F002FE28C /* listdsx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = listdsx.exe; sourceTree = "<group>"; };
+		B55FE1AB22A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1AC22A1799F002FE28C /* listds.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = listds.cpp; sourceTree = "<group>"; };
+		B55FE1AD22A1799F002FE28C /* listdsx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = listdsx; sourceTree = "<group>"; };
+		B55FE1AE22A1799F002FE28C /* pset08listds.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset08listds.pdf; sourceTree = "<group>"; };
+		B55FE1AF22A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE1B122A1799F002FE28C /* randomN.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = randomN.cpp; sourceTree = "<group>"; };
+		B55FE1B222A1799F002FE28C /* binsearchDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = binsearchDriver.cpp; sourceTree = "<group>"; };
+		B55FE1B322A1799F002FE28C /* pset04binsearch.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset04binsearch.pdf; sourceTree = "<group>"; };
+		B55FE1B422A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1B522A1799F002FE28C /* binsearch */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = binsearch; sourceTree = "<group>"; };
+		B55FE1B622A1799F002FE28C /* binsearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = binsearch.cpp; sourceTree = "<group>"; };
+		B55FE1B722A1799F002FE28C /* binsearchx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = binsearchx.exe; sourceTree = "<group>"; };
+		B55FE1B822A1799F002FE28C /* printList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = printList.cpp; sourceTree = "<group>"; };
+		B55FE1B922A1799F002FE28C /* randomNx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = randomNx.exe; sourceTree = "<group>"; };
+		B55FE1BA22A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE1BB22A1799F002FE28C /* randomN */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = randomN; sourceTree = "<group>"; };
+		B55FE1BD22A1799F002FE28C /* treeprint.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = treeprint.cpp; sourceTree = "<group>"; };
+		B55FE1BE22A1799F002FE28C /* pset_tree.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset_tree.pdf; sourceTree = "<group>"; };
+		B55FE1BF22A1799F002FE28C /* tree.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = tree.cpp; sourceTree = "<group>"; };
+		B55FE1C022A1799F002FE28C /* treex.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = treex.exe; sourceTree = "<group>"; };
+		B55FE1C122A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1C222A1799F002FE28C /* treex */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = treex; sourceTree = "<group>"; };
+		B55FE1C322A1799F002FE28C /* treeDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = treeDriver.cpp; sourceTree = "<group>"; };
+		B55FE1C522A1799F002FE28C /* Recurrence.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = Recurrence.pdf; sourceTree = "<group>"; };
+		B55FE1C722A1799F002FE28C /* recursion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursion.cpp; sourceTree = "<group>"; };
+		B55FE1C822A1799F002FE28C /* recursionx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = recursionx.exe; sourceTree = "<group>"; };
+		B55FE1C922A1799F002FE28C /* compiling_error.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = compiling_error.txt; sourceTree = "<group>"; };
+		B55FE1CA22A1799F002FE28C /* recursionDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = recursionDriver.cpp; sourceTree = "<group>"; };
+		B55FE1CB22A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1CC22A1799F002FE28C /* binsearch.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = binsearch.cpp; sourceTree = "<group>"; };
+		B55FE1CD22A1799F002FE28C /* binsearchx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = binsearchx.exe; sourceTree = "<group>"; };
+		B55FE1CE22A1799F002FE28C /* pset03recursion.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset03recursion.pdf; sourceTree = "<group>"; };
+		B55FE1CF22A1799F002FE28C /* binsearch.cpp.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = binsearch.cpp.zip; sourceTree = "<group>"; };
+		B55FE1D022A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE1D222A1799F002FE28C /* sort */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sort; sourceTree = "<group>"; };
+		B55FE1D322A1799F002FE28C /* compiling_error.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = compiling_error.txt; sourceTree = "<group>"; };
+		B55FE1D422A1799F002FE28C /* selectionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = selectionSort.cpp; sourceTree = "<group>"; };
+		B55FE1D522A1799F002FE28C /* sortx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sortx; sourceTree = "<group>"; };
+		B55FE1D622A1799F002FE28C /* sortw.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = sortw.exe; sourceTree = "<group>"; };
+		B55FE1D722A1799F002FE28C /* random.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = random.pdf; sourceTree = "<group>"; };
+		B55FE1D822A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE1D922A1799F002FE28C /* sortx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = sortx.exe; sourceTree = "<group>"; };
+		B55FE1DA22A1799F002FE28C /* bubble.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bubble.cpp; sourceTree = "<group>"; };
+		B55FE1DB22A1799F002FE28C /* sortDriver2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortDriver2.cpp; sourceTree = "<group>"; };
+		B55FE1DC22A1799F002FE28C /* sortDriver1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortDriver1.cpp; sourceTree = "<group>"; };
+		B55FE1DD22A1799F002FE28C /* insertion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = insertion.cpp; sourceTree = "<group>"; };
+		B55FE1DE22A1799F002FE28C /* pset02sort.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset02sort.pdf; sourceTree = "<group>"; };
+		B55FE1DF22A1799F002FE28C /* csort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = csort.cpp; sourceTree = "<group>"; };
+		B55FE1E022A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE1E222A1799F002FE28C /* graph.o_mac */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = graph.o_mac; sourceTree = "<group>"; };
+		B55FE1E322A1799F002FE28C /* psetgraph.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = psetgraph.pdf; sourceTree = "<group>"; };
+		B55FE1E522A1799F002FE28C /* graph.o_mac */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.objfile"; path = graph.o_mac; sourceTree = "<group>"; };
+		B55FE1E722A1799F002FE28C /* graphDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graphDriver.cpp; sourceTree = "<group>"; };
+		B55FE1E822A1799F002FE28C /* pset12.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = pset12.xcodeproj; sourceTree = "<group>"; };
+		B55FE1EB22A1799F002FE28C /* psetgraph.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = psetgraph.docx; sourceTree = "<group>"; };
+		B55FE1EC22A1799F002FE28C /* graphx */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = graphx; sourceTree = "<group>"; };
+		B55FE1ED22A1799F002FE28C /* graph.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = graph.h; sourceTree = "<group>"; };
+		B55FE1EE22A1799F002FE28C /* antenna.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = antenna.txt; sourceTree = "<group>"; };
+		B55FE1EF22A1799F002FE28C /* graphDriver.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = graphDriver.cpp; sourceTree = "<group>"; };
+		B55FE1F022A1799F002FE28C /* graph5.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = graph5.txt; sourceTree = "<group>"; };
+		B55FE1F122A1799F002FE28C /* graphx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = graphx.exe; sourceTree = "<group>"; };
+		B55FE1F222A1799F002FE28C /* graph6.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = graph6.txt; sourceTree = "<group>"; };
+		B55FE1F322A1799F002FE28C /* graph3.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = graph3.txt; sourceTree = "<group>"; };
+		B55FE1F422A1799F002FE28C /* graph2.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = graph2.txt; sourceTree = "<group>"; };
+		B55FE1F522A1799F002FE28C /* graph1.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = graph1.txt; sourceTree = "<group>"; };
+		B55FE1F722A1799F002FE28C /* pset11.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = pset11.xcodeproj; sourceTree = "<group>"; };
+		B55FE1FC22A1799F002FE28C /* pf2 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pf2; sourceTree = "<group>"; };
+		B55FE1FD22A1799F002FE28C /* output20000q.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output20000q.txt; sourceTree = "<group>"; };
+		B55FE1FE22A1799F002FE28C /* profiling1.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = profiling1.cpp; sourceTree = "<group>"; };
+		B55FE1FF22A1799F002FE28C /* profiling.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = profiling.pdf; sourceTree = "<group>"; };
+		B55FE20022A1799F002FE28C /* profiling2.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = profiling2.cpp; sourceTree = "<group>"; };
+		B55FE20122A1799F002FE28C /* profiling.xlsx */ = {isa = PBXFileReference; lastKnownFileType = file; path = profiling.xlsx; sourceTree = "<group>"; };
+		B55FE20222A1799F002FE28C /* output20000.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output20000.txt; sourceTree = "<group>"; };
+		B55FE20322A1799F002FE28C /* output2000000.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = output2000000.txt; sourceTree = "<group>"; };
+		B55FE20422A1799F002FE28C /* sort */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = sort; sourceTree = "<group>"; };
+		B55FE20522A1799F002FE28C /* profiling_billion_q.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_billion_q.txt; sourceTree = "<group>"; };
+		B55FE20622A1799F002FE28C /* compiling_error.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = compiling_error.txt; sourceTree = "<group>"; };
+		B55FE20722A1799F002FE28C /* report.docx */ = {isa = PBXFileReference; lastKnownFileType = file; path = report.docx; sourceTree = "<group>"; };
+		B55FE20822A1799F002FE28C /* selectionSort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = selectionSort.cpp; sourceTree = "<group>"; };
+		B55FE20922A1799F002FE28C /* profiling_milion_s.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_milion_s.txt; sourceTree = "<group>"; };
+		B55FE20A22A1799F002FE28C /* profiling_q.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_q.txt; sourceTree = "<group>"; };
+		B55FE20B22A1799F002FE28C /* profiling_q */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profiling_q; sourceTree = "<group>"; };
+		B55FE20C22A1799F002FE28C /* profiling_s.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_s.txt; sourceTree = "<group>"; };
+		B55FE20D22A1799F002FE28C /* profiling_milion_q.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_milion_q.txt; sourceTree = "<group>"; };
+		B55FE20E22A1799F002FE28C /* profiling_q.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = profiling_q.exe; sourceTree = "<group>"; };
+		B55FE20F22A1799F002FE28C /* pf1 */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = pf1; sourceTree = "<group>"; };
+		B55FE21022A1799F002FE28C /* a.out */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = a.out; sourceTree = "<group>"; };
+		B55FE21122A1799F002FE28C /* sortx.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = sortx.exe; sourceTree = "<group>"; };
+		B55FE21222A1799F002FE28C /* profiling_s.exe */ = {isa = PBXFileReference; lastKnownFileType = file; path = profiling_s.exe; sourceTree = "<group>"; };
+		B55FE21322A1799F002FE28C /* bubble.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = bubble.cpp; sourceTree = "<group>"; };
+		B55FE21422A1799F002FE28C /* prof */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = prof; sourceTree = "<group>"; };
+		B55FE21522A1799F002FE28C /* sortDriver3.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = sortDriver3.cpp; sourceTree = "<group>"; };
+		B55FE21622A1799F002FE28C /* profiling_2billion_q.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = profiling_2billion_q.txt; sourceTree = "<group>"; };
+		B55FE21722A1799F002FE28C /* insertion.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = insertion.cpp; sourceTree = "<group>"; };
+		B55FE21822A1799F002FE28C /* profiling_s */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = profiling_s; sourceTree = "<group>"; };
+		B55FE21922A1799F002FE28C /* quicksort.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = quicksort.cpp; sourceTree = "<group>"; };
+		B55FE21B22A1799F002FE28C /* names.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = names.txt; sourceTree = "<group>"; };
+		B55FE21C22A1799F002FE28C /* msys_1.0_home_user.profile */ = {isa = PBXFileReference; lastKnownFileType = text; path = msys_1.0_home_user.profile; sourceTree = "<group>"; };
+		B55FE21D22A1799F002FE28C /* HelloWho.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWho.cpp; sourceTree = "<group>"; };
+		B55FE21E22A1799F002FE28C /* pset01.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = pset01.pdf; sourceTree = "<group>"; };
+		B55FE22022A1799F002FE28C /* names.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = names.txt; sourceTree = "<group>"; };
+		B55FE22122A1799F002FE28C /* HelloWho.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = HelloWho.cpp; sourceTree = "<group>"; };
+		B55FE22222A1799F002FE28C /* Hello */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.executable"; path = Hello; sourceTree = "<group>"; };
+		B55FE22422A1799F002FE28C /* 05-3AVLup.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-3AVLup.pdf"; sourceTree = "<group>"; };
+		B55FE22522A1799F002FE28C /* 03-1StackQueueUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03-1StackQueueUP.pdf"; sourceTree = "<group>"; };
+		B55FE22622A1799F002FE28C /* 04-2linkedListUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-2linkedListUP.pdf"; sourceTree = "<group>"; };
+		B55FE22722A1799F002FE28C /* 05-2BSTpset.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-2BSTpset.pdf"; sourceTree = "<group>"; };
+		B55FE22822A1799F002FE28C /* 04-3linkedListUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-3linkedListUP.pdf"; sourceTree = "<group>"; };
+		B55FE22922A1799F002FE28C /* 05-4heap.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-4heap.pdf"; sourceTree = "<group>"; };
+		B55FE22A22A1799F002FE28C /* 05-1treeUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-1treeUP.pdf"; sourceTree = "<group>"; };
+		B55FE22B22A1799F002FE28C /* 04-1linkedPointerUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-1linkedPointerUP.pdf"; sourceTree = "<group>"; };
+		B55FE22C22A1799F002FE28C /* 01-4Recursion.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-4Recursion.pdf"; sourceTree = "<group>"; };
+		B55FE22D22A1799F002FE28C /* 04-1linkedPointerUP 2.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-1linkedPointerUP 2.pdf"; sourceTree = "<group>"; };
+		B55FE22E22A1799F002FE28C /* 04-4linkedListUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "04-4linkedListUP.pdf"; sourceTree = "<group>"; };
+		B55FE22F22A1799F002FE28C /* 02-1Struct.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02-1Struct.pdf"; sourceTree = "<group>"; };
+		B55FE23022A1799F002FE28C /* 05-2BST_UP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-2BST_UP.pdf"; sourceTree = "<group>"; };
+		B55FE23122A1799F002FE28C /* 03-2StackQueueUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "03-2StackQueueUP.pdf"; sourceTree = "<group>"; };
+		B55FE23222A1799F002FE28C /* 01-3MemoryPointers.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-3MemoryPointers.pdf"; sourceTree = "<group>"; };
+		B55FE23322A1799F002FE28C /* 01-5TimeComplexityUp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-5TimeComplexityUp.pdf"; sourceTree = "<group>"; };
+		B55FE23422A1799F002FE28C /* 05-4heapcode.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-4heapcode.pdf"; sourceTree = "<group>"; };
+		B55FE23522A1799F002FE28C /* 01-4FunctionPoiner.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-4FunctionPoiner.pdf"; sourceTree = "<group>"; };
+		B55FE23622A1799F002FE28C /* 01-1Overview.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "01-1Overview.pdf"; sourceTree = "<group>"; };
+		B55FE23722A1799F002FE28C /* 07-1 heapsort.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "07-1 heapsort.pdf"; sourceTree = "<group>"; };
+		B55FE23822A1799F002FE28C /* 02-0DiscreteMathUp.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "02-0DiscreteMathUp.pdf"; sourceTree = "<group>"; };
+		B55FE23922A1799F002FE28C /* 05-2BSTUP.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "05-2BSTUP.pdf"; sourceTree = "<group>"; };
+		B55FE23B22A1799F002FE28C /* listds.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = listds.h; sourceTree = "<group>"; };
+		B55FE23C22A1799F002FE28C /* tree.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = tree.h; sourceTree = "<group>"; };
+		B55FE23D22A1799F002FE28C /* listnode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = listnode.h; sourceTree = "<group>"; };
+		B55FE23E22A1799F002FE28C /* nowic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = nowic.h; sourceTree = "<group>"; };
+		B55FE23F22A1799F002FE28C /* treenode.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = treenode.h; sourceTree = "<group>"; };
+		B55FE24022A1799F002FE28C /* lab01.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = lab01.h; sourceTree = "<group>"; };
+		B55FE24122A1799F002FE28C /* heap.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = heap.h; sourceTree = "<group>"; };
+		B55FE24222A1799F002FE28C /* .gitignore */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitignore; sourceTree = "<group>"; };
+		B55FE24422A1799F002FE28C /* hello.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = hello.cpp; sourceTree = "<group>"; };
+		B55FE24522A1799F002FE28C /* .gitattributes */ = {isa = PBXFileReference; lastKnownFileType = text; path = .gitattributes; sourceTree = "<group>"; };
+		B55FE24722A1799F002FE28C /* libsort.a.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = libsort.a.zip; sourceTree = "<group>"; };
+		B55FE24822A1799F002FE28C /* libsort.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libsort.a; sourceTree = "<group>"; };
+		B55FE24922A1799F002FE28C /* nowic.lib */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = nowic.lib; sourceTree = "<group>"; };
+		B55FE24A22A1799F002FE28C /* libnowic.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnowic.a; sourceTree = "<group>"; };
+		B55FE24B22A1799F002FE28C /* libnowic_mac.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libnowic_mac.a; sourceTree = "<group>"; };
+		B55FE24C22A1799F002FE28C /* nowic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = nowic.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B55FE13022A1789D002FE28C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55FE25322A179AD002FE28C /* libnowic_mac.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B55FE12A22A1789D002FE28C = {
+			isa = PBXGroup;
+			children = (
+				B55FE13522A1789D002FE28C /* pset12 */,
+				B55FE13422A1789D002FE28C /* Products */,
+				B55FE13F22A1799F002FE28C /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B55FE13422A1789D002FE28C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE13322A1789D002FE28C /* pset12 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B55FE13522A1789D002FE28C /* pset12 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE13D22A178CD002FE28C /* graphDriver.cpp */,
+			);
+			path = pset12;
+			sourceTree = "<group>";
+		};
+		B55FE13F22A1799F002FE28C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14022A1799F002FE28C /* DS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B55FE14022A1799F002FE28C /* DS */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14122A1799F002FE28C /* labs */,
+				B55FE16522A1799F002FE28C /* psets */,
+				B55FE21F22A1799F002FE28C /* Assignments */,
+				B55FE22322A1799F002FE28C /* ppts */,
+				B55FE23A22A1799F002FE28C /* include */,
+				B55FE24222A1799F002FE28C /* .gitignore */,
+				B55FE24322A1799F002FE28C /* examples */,
+				B55FE24522A1799F002FE28C /* .gitattributes */,
+				B55FE24622A1799F002FE28C /* lib */,
+			);
+			name = DS;
+			path = ../../..;
+			sourceTree = "<group>";
+		};
+		B55FE14122A1799F002FE28C /* labs */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14222A1799F002FE28C /* lab04ptr */,
+				B55FE14922A1799F002FE28C /* lab03 */,
+				B55FE14C22A1799F002FE28C /* lab04 */,
+				B55FE15122A1799F002FE28C /* lab05 */,
+				B55FE15422A1799F002FE28C /* lab02 */,
+				B55FE15922A1799F002FE28C /* lab06struct */,
+				B55FE15E22A1799F002FE28C /* lab05class */,
+				B55FE16122A1799F002FE28C /* lab01 */,
+			);
+			path = labs;
+			sourceTree = "<group>";
+		};
+		B55FE14222A1799F002FE28C /* lab04ptr */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14322A1799F002FE28C /* lab04a.cpp */,
+				B55FE14422A1799F002FE28C /* lab04b.cpp */,
+				B55FE14522A1799F002FE28C /* lab04b.exe */,
+				B55FE14622A1799F002FE28C /* lab04.md */,
+				B55FE14722A1799F002FE28C /* a.exe */,
+				B55FE14822A1799F002FE28C /* lab04a.exe */,
+			);
+			path = lab04ptr;
+			sourceTree = "<group>";
+		};
+		B55FE14922A1799F002FE28C /* lab03 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14A22A1799F002FE28C /* lab03.md */,
+				B55FE14B22A1799F002FE28C /* lab03.cpp */,
+			);
+			path = lab03;
+			sourceTree = "<group>";
+		};
+		B55FE14C22A1799F002FE28C /* lab04 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE14D22A1799F002FE28C /* lab04a.cpp */,
+				B55FE14E22A1799F002FE28C /* lab04b.cpp */,
+				B55FE14F22A1799F002FE28C /* lab04.md */,
+				B55FE15022A1799F002FE28C /* a.out */,
+			);
+			path = lab04;
+			sourceTree = "<group>";
+		};
+		B55FE15122A1799F002FE28C /* lab05 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE15222A1799F002FE28C /* lab05.md */,
+				B55FE15322A1799F002FE28C /* lab05.cpp */,
+			);
+			path = lab05;
+			sourceTree = "<group>";
+		};
+		B55FE15422A1799F002FE28C /* lab02 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE15522A1799F002FE28C /* compiling_error.txt */,
+				B55FE15622A1799F002FE28C /* lab02.cpp */,
+				B55FE15722A1799F002FE28C /* a.out */,
+				B55FE15822A1799F002FE28C /* lab02.md */,
+			);
+			path = lab02;
+			sourceTree = "<group>";
+		};
+		B55FE15922A1799F002FE28C /* lab06struct */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE15A22A1799F002FE28C /* struct.cpp */,
+				B55FE15B22A1799F002FE28C /* structx.exe */,
+				B55FE15C22A1799F002FE28C /* a.out */,
+				B55FE15D22A1799F002FE28C /* struct.pdf */,
+			);
+			path = lab06struct;
+			sourceTree = "<group>";
+		};
+		B55FE15E22A1799F002FE28C /* lab05class */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE15F22A1799F002FE28C /* lab05.md */,
+				B55FE16022A1799F002FE28C /* lab05.cpp */,
+			);
+			path = lab05class;
+			sourceTree = "<group>";
+		};
+		B55FE16122A1799F002FE28C /* lab01 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE16222A1799F002FE28C /* lab01.md */,
+				B55FE16322A1799F002FE28C /* lab01.cpp */,
+				B55FE16422A1799F002FE28C /* lab01driver.cpp */,
+			);
+			path = lab01;
+			sourceTree = "<group>";
+		};
+		B55FE16522A1799F002FE28C /* psets */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE16622A1799F002FE28C /* pset08listds_ex_old */,
+				B55FE16E22A1799F002FE28C /* pset08listds_ex_latest */,
+				B55FE17822A1799F002FE28C /* pset08 */,
+				B55FE17D22A1799F002FE28C /* pset11heap */,
+				B55FE18922A1799F002FE28C /* pset09-10tree_revised */,
+				B55FE19322A1799F002FE28C /* pset07listnode */,
+				B55FE19B22A1799F002FE28C /* pset-extra1 */,
+				B55FE1A722A1799F002FE28C /* pset08listds */,
+				B55FE1B022A1799F002FE28C /* pset04binsearch */,
+				B55FE1BC22A1799F002FE28C /* pset09-10tree */,
+				B55FE1C422A1799F002FE28C /* pset05recurrence */,
+				B55FE1C622A1799F002FE28C /* pset03recursion */,
+				B55FE1D122A1799F002FE28C /* pset02sort */,
+				B55FE1E122A1799F002FE28C /* pset12graph */,
+				B55FE1F622A1799F002FE28C /* pset11 */,
+				B55FE1FB22A1799F002FE28C /* pset06profiling */,
+				B55FE21A22A1799F002FE28C /* pset01hello */,
+			);
+			path = psets;
+			sourceTree = "<group>";
+		};
+		B55FE16622A1799F002FE28C /* pset08listds_ex_old */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE16722A1799F002FE28C /* listdsDriver.cpp */,
+				B55FE16822A1799F002FE28C /* listsort.cpp */,
+				B55FE16922A1799F002FE28C /* listdsx.exe */,
+				B55FE16A22A1799F002FE28C /* listds.cpp */,
+				B55FE16B22A1799F002FE28C /* listdsx */,
+				B55FE16C22A1799F002FE28C /* pset08listds.pdf */,
+				B55FE16D22A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset08listds_ex_old;
+			sourceTree = "<group>";
+		};
+		B55FE16E22A1799F002FE28C /* pset08listds_ex_latest */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE16F22A1799F002FE28C /* listdsDriver.cpp */,
+				B55FE17022A1799F002FE28C /* listsort.cpp */,
+				B55FE17122A1799F002FE28C /* listdsx.exe */,
+				B55FE17222A1799F002FE28C /* runningtime.docx */,
+				B55FE17322A1799F002FE28C /* a.out */,
+				B55FE17422A1799F002FE28C /* listds.cpp */,
+				B55FE17522A1799F002FE28C /* listdsx */,
+				B55FE17622A1799F002FE28C /* pset08listds.pdf */,
+				B55FE17722A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset08listds_ex_latest;
+			sourceTree = "<group>";
+		};
+		B55FE17822A1799F002FE28C /* pset08 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE17922A1799F002FE28C /* pset08 */,
+				B55FE17A22A1799F002FE28C /* pset08.xcodeproj */,
+			);
+			path = pset08;
+			sourceTree = "<group>";
+		};
+		B55FE17922A1799F002FE28C /* pset08 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pset08;
+			sourceTree = "<group>";
+		};
+		B55FE17B22A1799F002FE28C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE24F22A1799F002FE28C /* pset08 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B55FE17D22A1799F002FE28C /* pset11heap */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE17E22A1799F002FE28C /* treeprint.cpp */,
+				B55FE17F22A1799F002FE28C /* heapx.exe */,
+				B55FE18022A1799F002FE28C /* heapDriver.cpp */,
+				B55FE18122A1799F002FE28C /* pset_heap.pdf */,
+				B55FE18222A1799F002FE28C /* heapx */,
+				B55FE18322A1799F002FE28C /* heapsort.cpp */,
+				B55FE18422A1799F002FE28C /* heap.cpp */,
+				B55FE18522A1799F002FE28C /* heapprint.cpp */,
+				B55FE18622A1799F002FE28C /* a.out */,
+				B55FE18722A1799F002FE28C /* heapsortx.exe */,
+				B55FE18822A1799F002FE28C /* heapsortx */,
+			);
+			path = pset11heap;
+			sourceTree = "<group>";
+		};
+		B55FE18922A1799F002FE28C /* pset09-10tree_revised */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE18A22A1799F002FE28C /* treeprint.cpp */,
+				B55FE18B22A1799F002FE28C /* DebugTree */,
+				B55FE18C22A1799F002FE28C /* pset_tree.pdf */,
+				B55FE18D22A1799F002FE28C /* tree.cpp */,
+				B55FE18E22A1799F002FE28C /* treex.exe */,
+				B55FE18F22A1799F002FE28C /* a.out */,
+				B55FE19022A1799F002FE28C /* treex */,
+				B55FE19122A1799F002FE28C /* final */,
+				B55FE19222A1799F002FE28C /* treeDriver.cpp */,
+			);
+			path = "pset09-10tree_revised";
+			sourceTree = "<group>";
+		};
+		B55FE19322A1799F002FE28C /* pset07listnode */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE19422A1799F002FE28C /* listnode.cpp */,
+				B55FE19522A1799F002FE28C /* listnodex.exe */,
+				B55FE19622A1799F002FE28C /* listnode_2.cpp */,
+				B55FE19722A1799F002FE28C /* listnodeDriver.cpp */,
+				B55FE19822A1799F002FE28C /* listnode.pdf */,
+				B55FE19922A1799F002FE28C /* listnodex */,
+				B55FE19A22A1799F002FE28C /* listnode */,
+			);
+			path = pset07listnode;
+			sourceTree = "<group>";
+		};
+		B55FE19B22A1799F002FE28C /* pset-extra1 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE19C22A1799F002FE28C /* sort_functions.zip */,
+				B55FE19D22A1799F002FE28C /* sort */,
+				B55FE19E22A1799F002FE28C /* quick.cpp */,
+				B55FE19F22A1799F002FE28C /* sort.cpp */,
+				B55FE1A022A1799F002FE28C /* a.out */,
+				B55FE1A122A1799F002FE28C /* sortx.exe */,
+				B55FE1A222A1799F002FE28C /* bubble.cpp */,
+				B55FE1A322A1799F002FE28C /* 1.c */,
+				B55FE1A422A1799F002FE28C /* insertion.cpp */,
+				B55FE1A522A1799F002FE28C /* selection.cpp */,
+				B55FE1A622A1799F002FE28C /* pset-extra1.pdf */,
+			);
+			path = "pset-extra1";
+			sourceTree = "<group>";
+		};
+		B55FE1A722A1799F002FE28C /* pset08listds */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1A822A1799F002FE28C /* listdsDriver.cpp */,
+				B55FE1A922A1799F002FE28C /* listsort.cpp */,
+				B55FE1AA22A1799F002FE28C /* listdsx.exe */,
+				B55FE1AB22A1799F002FE28C /* a.out */,
+				B55FE1AC22A1799F002FE28C /* listds.cpp */,
+				B55FE1AD22A1799F002FE28C /* listdsx */,
+				B55FE1AE22A1799F002FE28C /* pset08listds.pdf */,
+				B55FE1AF22A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset08listds;
+			sourceTree = "<group>";
+		};
+		B55FE1B022A1799F002FE28C /* pset04binsearch */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1B122A1799F002FE28C /* randomN.cpp */,
+				B55FE1B222A1799F002FE28C /* binsearchDriver.cpp */,
+				B55FE1B322A1799F002FE28C /* pset04binsearch.pdf */,
+				B55FE1B422A1799F002FE28C /* a.out */,
+				B55FE1B522A1799F002FE28C /* binsearch */,
+				B55FE1B622A1799F002FE28C /* binsearch.cpp */,
+				B55FE1B722A1799F002FE28C /* binsearchx.exe */,
+				B55FE1B822A1799F002FE28C /* printList.cpp */,
+				B55FE1B922A1799F002FE28C /* randomNx.exe */,
+				B55FE1BA22A1799F002FE28C /* quicksort.cpp */,
+				B55FE1BB22A1799F002FE28C /* randomN */,
+			);
+			path = pset04binsearch;
+			sourceTree = "<group>";
+		};
+		B55FE1BC22A1799F002FE28C /* pset09-10tree */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1BD22A1799F002FE28C /* treeprint.cpp */,
+				B55FE1BE22A1799F002FE28C /* pset_tree.pdf */,
+				B55FE1BF22A1799F002FE28C /* tree.cpp */,
+				B55FE1C022A1799F002FE28C /* treex.exe */,
+				B55FE1C122A1799F002FE28C /* a.out */,
+				B55FE1C222A1799F002FE28C /* treex */,
+				B55FE1C322A1799F002FE28C /* treeDriver.cpp */,
+			);
+			path = "pset09-10tree";
+			sourceTree = "<group>";
+		};
+		B55FE1C422A1799F002FE28C /* pset05recurrence */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1C522A1799F002FE28C /* Recurrence.pdf */,
+			);
+			path = pset05recurrence;
+			sourceTree = "<group>";
+		};
+		B55FE1C622A1799F002FE28C /* pset03recursion */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1C722A1799F002FE28C /* recursion.cpp */,
+				B55FE1C822A1799F002FE28C /* recursionx.exe */,
+				B55FE1C922A1799F002FE28C /* compiling_error.txt */,
+				B55FE1CA22A1799F002FE28C /* recursionDriver.cpp */,
+				B55FE1CB22A1799F002FE28C /* a.out */,
+				B55FE1CC22A1799F002FE28C /* binsearch.cpp */,
+				B55FE1CD22A1799F002FE28C /* binsearchx.exe */,
+				B55FE1CE22A1799F002FE28C /* pset03recursion.pdf */,
+				B55FE1CF22A1799F002FE28C /* binsearch.cpp.zip */,
+				B55FE1D022A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset03recursion;
+			sourceTree = "<group>";
+		};
+		B55FE1D122A1799F002FE28C /* pset02sort */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1D222A1799F002FE28C /* sort */,
+				B55FE1D322A1799F002FE28C /* compiling_error.txt */,
+				B55FE1D422A1799F002FE28C /* selectionSort.cpp */,
+				B55FE1D522A1799F002FE28C /* sortx */,
+				B55FE1D622A1799F002FE28C /* sortw.exe */,
+				B55FE1D722A1799F002FE28C /* random.pdf */,
+				B55FE1D822A1799F002FE28C /* a.out */,
+				B55FE1D922A1799F002FE28C /* sortx.exe */,
+				B55FE1DA22A1799F002FE28C /* bubble.cpp */,
+				B55FE1DB22A1799F002FE28C /* sortDriver2.cpp */,
+				B55FE1DC22A1799F002FE28C /* sortDriver1.cpp */,
+				B55FE1DD22A1799F002FE28C /* insertion.cpp */,
+				B55FE1DE22A1799F002FE28C /* pset02sort.pdf */,
+				B55FE1DF22A1799F002FE28C /* csort.cpp */,
+				B55FE1E022A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset02sort;
+			sourceTree = "<group>";
+		};
+		B55FE1E122A1799F002FE28C /* pset12graph */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1E222A1799F002FE28C /* graph.o_mac */,
+				B55FE1E322A1799F002FE28C /* psetgraph.pdf */,
+				B55FE1E422A1799F002FE28C /* pset12 */,
+				B55FE1EB22A1799F002FE28C /* psetgraph.docx */,
+				B55FE1EC22A1799F002FE28C /* graphx */,
+				B55FE1ED22A1799F002FE28C /* graph.h */,
+				B55FE1EE22A1799F002FE28C /* antenna.txt */,
+				B55FE1EF22A1799F002FE28C /* graphDriver.cpp */,
+				B55FE1F022A1799F002FE28C /* graph5.txt */,
+				B55FE1F122A1799F002FE28C /* graphx.exe */,
+				B55FE1F222A1799F002FE28C /* graph6.txt */,
+				B55FE1F322A1799F002FE28C /* graph3.txt */,
+				B55FE1F422A1799F002FE28C /* graph2.txt */,
+				B55FE1F522A1799F002FE28C /* graph1.txt */,
+			);
+			path = pset12graph;
+			sourceTree = "<group>";
+		};
+		B55FE1E422A1799F002FE28C /* pset12 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1E522A1799F002FE28C /* graph.o_mac */,
+				B55FE1E622A1799F002FE28C /* pset12 */,
+				B55FE1E822A1799F002FE28C /* pset12.xcodeproj */,
+			);
+			path = pset12;
+			sourceTree = "<group>";
+		};
+		B55FE1E622A1799F002FE28C /* pset12 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1E722A1799F002FE28C /* graphDriver.cpp */,
+			);
+			path = pset12;
+			sourceTree = "<group>";
+		};
+		B55FE1E922A1799F002FE28C /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B55FE1F622A1799F002FE28C /* pset11 */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1F722A1799F002FE28C /* pset11.xcodeproj */,
+				B55FE1FA22A1799F002FE28C /* pset11 */,
+			);
+			path = pset11;
+			sourceTree = "<group>";
+		};
+		B55FE1F822A1799F002FE28C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE25222A1799F002FE28C /* pset11 */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B55FE1FA22A1799F002FE28C /* pset11 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = pset11;
+			sourceTree = "<group>";
+		};
+		B55FE1FB22A1799F002FE28C /* pset06profiling */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE1FC22A1799F002FE28C /* pf2 */,
+				B55FE1FD22A1799F002FE28C /* output20000q.txt */,
+				B55FE1FE22A1799F002FE28C /* profiling1.cpp */,
+				B55FE1FF22A1799F002FE28C /* profiling.pdf */,
+				B55FE20022A1799F002FE28C /* profiling2.cpp */,
+				B55FE20122A1799F002FE28C /* profiling.xlsx */,
+				B55FE20222A1799F002FE28C /* output20000.txt */,
+				B55FE20322A1799F002FE28C /* output2000000.txt */,
+				B55FE20422A1799F002FE28C /* sort */,
+				B55FE20522A1799F002FE28C /* profiling_billion_q.txt */,
+				B55FE20622A1799F002FE28C /* compiling_error.txt */,
+				B55FE20722A1799F002FE28C /* report.docx */,
+				B55FE20822A1799F002FE28C /* selectionSort.cpp */,
+				B55FE20922A1799F002FE28C /* profiling_milion_s.txt */,
+				B55FE20A22A1799F002FE28C /* profiling_q.txt */,
+				B55FE20B22A1799F002FE28C /* profiling_q */,
+				B55FE20C22A1799F002FE28C /* profiling_s.txt */,
+				B55FE20D22A1799F002FE28C /* profiling_milion_q.txt */,
+				B55FE20E22A1799F002FE28C /* profiling_q.exe */,
+				B55FE20F22A1799F002FE28C /* pf1 */,
+				B55FE21022A1799F002FE28C /* a.out */,
+				B55FE21122A1799F002FE28C /* sortx.exe */,
+				B55FE21222A1799F002FE28C /* profiling_s.exe */,
+				B55FE21322A1799F002FE28C /* bubble.cpp */,
+				B55FE21422A1799F002FE28C /* prof */,
+				B55FE21522A1799F002FE28C /* sortDriver3.cpp */,
+				B55FE21622A1799F002FE28C /* profiling_2billion_q.txt */,
+				B55FE21722A1799F002FE28C /* insertion.cpp */,
+				B55FE21822A1799F002FE28C /* profiling_s */,
+				B55FE21922A1799F002FE28C /* quicksort.cpp */,
+			);
+			path = pset06profiling;
+			sourceTree = "<group>";
+		};
+		B55FE21A22A1799F002FE28C /* pset01hello */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE21B22A1799F002FE28C /* names.txt */,
+				B55FE21C22A1799F002FE28C /* msys_1.0_home_user.profile */,
+				B55FE21D22A1799F002FE28C /* HelloWho.cpp */,
+				B55FE21E22A1799F002FE28C /* pset01.pdf */,
+			);
+			path = pset01hello;
+			sourceTree = "<group>";
+		};
+		B55FE21F22A1799F002FE28C /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE22022A1799F002FE28C /* names.txt */,
+				B55FE22122A1799F002FE28C /* HelloWho.cpp */,
+				B55FE22222A1799F002FE28C /* Hello */,
+			);
+			path = Assignments;
+			sourceTree = "<group>";
+		};
+		B55FE22322A1799F002FE28C /* ppts */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE22422A1799F002FE28C /* 05-3AVLup.pdf */,
+				B55FE22522A1799F002FE28C /* 03-1StackQueueUP.pdf */,
+				B55FE22622A1799F002FE28C /* 04-2linkedListUP.pdf */,
+				B55FE22722A1799F002FE28C /* 05-2BSTpset.pdf */,
+				B55FE22822A1799F002FE28C /* 04-3linkedListUP.pdf */,
+				B55FE22922A1799F002FE28C /* 05-4heap.pdf */,
+				B55FE22A22A1799F002FE28C /* 05-1treeUP.pdf */,
+				B55FE22B22A1799F002FE28C /* 04-1linkedPointerUP.pdf */,
+				B55FE22C22A1799F002FE28C /* 01-4Recursion.pdf */,
+				B55FE22D22A1799F002FE28C /* 04-1linkedPointerUP 2.pdf */,
+				B55FE22E22A1799F002FE28C /* 04-4linkedListUP.pdf */,
+				B55FE22F22A1799F002FE28C /* 02-1Struct.pdf */,
+				B55FE23022A1799F002FE28C /* 05-2BST_UP.pdf */,
+				B55FE23122A1799F002FE28C /* 03-2StackQueueUP.pdf */,
+				B55FE23222A1799F002FE28C /* 01-3MemoryPointers.pdf */,
+				B55FE23322A1799F002FE28C /* 01-5TimeComplexityUp.pdf */,
+				B55FE23422A1799F002FE28C /* 05-4heapcode.pdf */,
+				B55FE23522A1799F002FE28C /* 01-4FunctionPoiner.pdf */,
+				B55FE23622A1799F002FE28C /* 01-1Overview.pdf */,
+				B55FE23722A1799F002FE28C /* 07-1 heapsort.pdf */,
+				B55FE23822A1799F002FE28C /* 02-0DiscreteMathUp.pdf */,
+				B55FE23922A1799F002FE28C /* 05-2BSTUP.pdf */,
+			);
+			path = ppts;
+			sourceTree = "<group>";
+		};
+		B55FE23A22A1799F002FE28C /* include */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE23B22A1799F002FE28C /* listds.h */,
+				B55FE23C22A1799F002FE28C /* tree.h */,
+				B55FE23D22A1799F002FE28C /* listnode.h */,
+				B55FE23E22A1799F002FE28C /* nowic.h */,
+				B55FE23F22A1799F002FE28C /* treenode.h */,
+				B55FE24022A1799F002FE28C /* lab01.h */,
+				B55FE24122A1799F002FE28C /* heap.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
+		B55FE24322A1799F002FE28C /* examples */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE24422A1799F002FE28C /* hello.cpp */,
+			);
+			path = examples;
+			sourceTree = "<group>";
+		};
+		B55FE24622A1799F002FE28C /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				B55FE24722A1799F002FE28C /* libsort.a.zip */,
+				B55FE24822A1799F002FE28C /* libsort.a */,
+				B55FE24922A1799F002FE28C /* nowic.lib */,
+				B55FE24A22A1799F002FE28C /* libnowic.a */,
+				B55FE24B22A1799F002FE28C /* libnowic_mac.a */,
+				B55FE24C22A1799F002FE28C /* nowic.cpp */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B55FE13222A1789D002FE28C /* pset12 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B55FE13A22A1789D002FE28C /* Build configuration list for PBXNativeTarget "pset12" */;
+			buildPhases = (
+				B55FE12F22A1789D002FE28C /* Sources */,
+				B55FE13022A1789D002FE28C /* Frameworks */,
+				B55FE13122A1789D002FE28C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pset12;
+			productName = pset12;
+			productReference = B55FE13322A1789D002FE28C /* pset12 */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B55FE12B22A1789D002FE28C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Yeo Hun Jeon";
+				TargetAttributes = {
+					B55FE13222A1789D002FE28C = {
+						CreatedOnToolsVersion = 10.2.1;
+					};
+				};
+			};
+			buildConfigurationList = B55FE12E22A1789D002FE28C /* Build configuration list for PBXProject "pset12" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = B55FE12A22A1789D002FE28C;
+			productRefGroup = B55FE13422A1789D002FE28C /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B55FE17B22A1799F002FE28C /* Products */;
+					ProjectRef = B55FE17A22A1799F002FE28C /* pset08.xcodeproj */;
+				},
+				{
+					ProductGroup = B55FE1F822A1799F002FE28C /* Products */;
+					ProjectRef = B55FE1F722A1799F002FE28C /* pset11.xcodeproj */;
+				},
+				{
+					ProductGroup = B55FE1E922A1799F002FE28C /* Products */;
+					ProjectRef = B55FE1E822A1799F002FE28C /* pset12.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B55FE13222A1789D002FE28C /* pset12 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B55FE24F22A1799F002FE28C /* pset08 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pset08;
+			remoteRef = B55FE24E22A1799F002FE28C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		B55FE25222A1799F002FE28C /* pset11 */ = {
+			isa = PBXReferenceProxy;
+			fileType = "compiled.mach-o.executable";
+			path = pset11;
+			remoteRef = B55FE25122A1799F002FE28C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B55FE12F22A1789D002FE28C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B55FE13E22A178CD002FE28C /* graphDriver.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		B55FE13822A1789D002FE28C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B55FE13922A1789D002FE28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B55FE13B22A1789D002FE28C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/Users/yeohunjeon/Desktop/2019-1/DS/psets/pset12graph",
+					"/Users/yeohunjeon/Desktop/2019-1/DS/include",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/yeohunjeon/Desktop/2019-1/DS/lib";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B55FE13C22A1789D002FE28C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				HEADER_SEARCH_PATHS = (
+					"/Users/yeohunjeon/Desktop/2019-1/DS/psets/pset12graph",
+					"/Users/yeohunjeon/Desktop/2019-1/DS/include",
+				);
+				LIBRARY_SEARCH_PATHS = "/Users/yeohunjeon/Desktop/2019-1/DS/lib";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B55FE12E22A1789D002FE28C /* Build configuration list for PBXProject "pset12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55FE13822A1789D002FE28C /* Debug */,
+				B55FE13922A1789D002FE28C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B55FE13A22A1789D002FE28C /* Build configuration list for PBXNativeTarget "pset12" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B55FE13B22A1789D002FE28C /* Debug */,
+				B55FE13C22A1789D002FE28C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B55FE12B22A1789D002FE28C /* Project object */;
+}
