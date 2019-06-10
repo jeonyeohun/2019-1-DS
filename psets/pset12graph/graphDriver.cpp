@@ -1,4 +1,7 @@
 /**
+
+On my honour, I pledge that I have neither received nor provided improper assistance in the completion of this assignment. Signed: Jeon, YeoHun
+
 * File: graphDriver.cpp
 *	interactively tests many functions implemented in graph.c and graph.h
 *
@@ -11,14 +14,14 @@
 *  the number of edges E. Parallel edges and self-loops are permitted.
 *
 *  The cycle() implements a data type for determining whether
-*  an undirected graph has a cycle. If a cycle is found, it returns 
+*  an undirected graph has a cycle. If a cycle is found, it returns
 *  a stack loaded with vertices, nullptr otherwise.
 *
 *  The bigraph() implements a data type for determining whether
 *  an undirected graph is bipartite or whether it has an odd-length cycle.
 *  If so, the color operation determines a bipartition; if not, the oddCycle
 *  operation determines a cycle with an odd number of edges.
-*  
+*
 *  A graph file format (graph1.txt) is shown below:
 # To represent a graph:
 # The number of vertex in the graph comes at the first line.
@@ -50,7 +53,7 @@
 1 3
 2 3
 3 4
-* 
+*
 *	@author Youngsup Kim, idebtor@gmail.com
 *	2014/2016/	YSK	Creation
 *	2016/05/01	YSK Iteractive oprations, command-line option added
@@ -67,8 +70,8 @@
 using namespace std;
 
 /**************** pset-graph step 1 (graph6.txt) ****************/
-/* It checks if a graph is cyclic or not. 
-   Don't use graph_by_file(), but use new Graph() and addEdge() 
+/* It checks if a graph is cyclic or not.
+   Don't use graph_by_file(), but use new Graph() and addEdge()
    to make a graph shown below:
 .
 .   [0] ------ [1]
@@ -88,33 +91,80 @@ using namespace std;
 *
 */
 
-void cyclic_check() {  
-	graph g = new Graph(5);     
-
-	cout << "your code here \n";
-
+void cyclic_check() {
+	graph g = new Graph(5);
+	addEdge(g, 0, 1);
+	addEdge(g, 0, 3);
+	addEdge(g, 1, 2);
+	addEdge(g, 2, 3);
+	addEdge(g, 3, 4);
 	// invoke print_adjlist()
+	print_adjlist(g);
+	queue <int> dd;
+	stack <int> cy;
 
 	// invoke cyclic() and print the result as shown in main()
+	BFS(g, 0);
+	DFS(g, 0, dd);
 
+	print_DFS(g);
+	print_BFS(g);
+
+	cout << "\tCycle: ";
+	if (cyclic(g, cy)) {
+		while (!cy.empty()) {
+			cout << cy.top() << " ";
+			cy.pop();
+		}
+	}
+	else
+		cout << "acyclic";
+	cout << endl;
 
 	// clear graph
 	clear(g);
 }
 
 /*********************** pset-graph step 4 ****************************/
+// runs two-coloring using DFS recursively
+void DFSbigraph(graph g, int v) {	// DFS
+	DPRINT(cout << ">DFSbigraph visits v=" << v << " color=" << g->color[v] << endl;);
+	g->marked[v] = true;			// v is visited now
+	for (gnode w = g->adj[v].next; w; w = w->next) {// runs for [v]'s vertices
+			if (!g->marked[w->item]){// if the vertex is not visited
+				g->parentDFS[w->item] = v;
+				g->color[w->item] = !g->color[v];
+				DFSbigraph(g, w->item);
+			}	// flip the color !g->color[v]
+		DPRINT(cout << "  set vertex=" << w->item << " color=" << !g->color[v] << endl;);
+	}
+}
+
 // checks the two-coloring to determine if it is bipartite or not.
-// if a graph is bipartite, it adj[v]'s color is different from all nodes connected to it. 
-bool bigraph_check(graph g) {         // graph5.txt and graph6.txt are bigraphs.
+// if a graph is bipartite, it adj[v]'s color is different from all
+// nodes connected to it.
+bool bigraph_check(graph g) {         // graph5~9.txt are bigraphs.
 	DPRINT(cout << ">bigraph_check\n";);
 	if (empty(g)) return true;
 
-	cout << "your code here \n";
+	// run DFS for two-coloring
+	for (int v = 0; v < V(g); v++) g->marked[v] = false;
+	g->color[0] = BLACK;	// set starting at v=0, BLACK=0, WHITE=1
+	DFSbigraph(g, 0);		// DFS starting at v=0
+
+	for (int v = 0; v < V(g); v++){
+		for (gnode w = g->adj[v].next; w; w = w->next) {
+			if(g->color[v] == g->color[w->item]){
+				return false;
+			}
+		}
+	}
+	// check the validity of two-coloring which is saved in g->color[].
+
 
 	DPRINT(cout << "<bigraph_check true\n";);
 	return true;
 }
-
 
 // a helper function to get a valid vertex number
 int getVertex(graph g) {
@@ -128,7 +178,7 @@ int getVertex(graph g) {
 
 string graphspecs(graph g) {
 	if (empty(g)) return "";
-	return " file:" + gfile(g) + " V:" + to_string(V(g)) + " E:" + to_string(E(g)) + 
+	return " file:" + gfile(g) + " V:" + to_string(V(g)) + " E:" + to_string(E(g)) +
 		   " CCs:" + to_string(nCCs(g)) + " Deg:" + to_string(degree(g));
 }
 
@@ -164,24 +214,24 @@ int main(int argc, const char **argv) {
 
 	do {
 		string ss = "";
-		if (empty(g)) 
+		if (empty(g))
 			cout << "\n\t" << menuGraph << endl;
 		else {
 			if (printMode & printAdjList) { ss += printMenu[printAdjList]; print_adjlist(g); }
 			if (printMode & printGraph)   { ss += printMenu[printGraph];  print_graph(g); }
 			if (printMode & printResult)  { ss += printMenu[printResult]; print_result(g); }
 			cout << "\n\t" << menuGraph << ss << "  " << graphspecs(g) << endl;
-		}	
-			
+		}
+
 		cout << "\tn - new graph file\t";		cout << "x - connected(v,w)? \n";
 		cout << "\td - DFS            \t";		cout << "e - distance(v,w)?  \n";
 		cout << "\tb - BFS            \t";		cout << "p - path(v,w)?      \n";
 		cout << "\tc - cyclic(v=0)?   \t";		cout << "m - print mode[adjList/graph/result]\n";
 		cout << "\tt - bigraph(v=0)?\t"; 		cout << "a - bigraph using adj-list coloring\n";
-												
+
 		c = GetChar("\tCommand(q to quit): ");
 		switch (c) {
-		case 'n':				
+		case 'n':
 			cout << "\n\tYou may use shell commands (e.g. ls, dir *.txt, pwd, cat, type).\n";
 			while (true) {
 				string fname = GetString("\tEnter a graph filename(q to quit): ");
@@ -201,17 +251,17 @@ int main(int argc, const char **argv) {
 			}
 			break;
 
-		case 'm': 
+		case 'm':
 			ss = "\tAvailable print_mode: ";
-			if (printMode & printAdjList) ss += printMenu[printAdjList] + " ";			
+			if (printMode & printAdjList) ss += printMenu[printAdjList] + " ";
 			if (printMode & printGraph)  ss += printMenu[printGraph] + " ";
 			if (printMode & printResult) ss += printMenu[printResult];
-			cout << ss << endl; 
+			cout << ss << endl;
 			ch = GetChar("\tTo toggle, select 'a', 'g', 'r': ");
 			switch (ch) {
 			case 'a':
 				printMode = (printMode & printAdjList) ? (printMode & ~printAdjList) : (printMode | printAdjList);
-				break;			
+				break;
 			case 'g':
 				printMode = (printMode & printGraph) ? (printMode & ~printGraph) : (printMode | printGraph);
 				break;
@@ -257,8 +307,19 @@ int main(int argc, const char **argv) {
 				break;
 			}
 
-			cout << "your code here \n";
 
+			cout << "\tDFS Path[" << v << ".." << w << "]: ";
+			DFSpath(g, v, w, path);
+			while(!path.empty()){
+				cout << path.top() << " ";
+				path.pop();
+			}
+			cout << "\n\tBFS Path[" << v << ".." << w << "]: ";
+			BFSpath(g, v, w, path);
+			while(!path.empty()){
+				cout << path.top() << " ";
+				path.pop();
+			}
 
 			break;
 
@@ -269,10 +330,10 @@ int main(int argc, const char **argv) {
 			if (cyclic(g, cy)) {
 				while (!cy.empty()) {
 					cout << cy.top() << " ";
-					cy.pop();   
+					cy.pop();
 				}
 			}
-			else 
+			else
 				cout << "acyclic";
 			cout << endl;
 			break;
@@ -283,7 +344,7 @@ int main(int argc, const char **argv) {
 			cout << "\tBigraph: ";
 			if (bigraph(g))   // using bfs algorithm
 				cout << "True, two-colorability succeeded.\n";
-			else 
+			else
 				cout << "False, two-colorability failed.\n ";
 
 			cout << "\tBigraph: ";
@@ -293,7 +354,7 @@ int main(int argc, const char **argv) {
 			else {
 				cout << "False, an odd-length cycle found: ";
 				while (!cy.empty()) {
-					cout << cy.top() << " "; 
+					cout << cy.top() << " ";
 					cy.pop();
 				}
 				cout << endl;
@@ -322,7 +383,6 @@ int main(int argc, const char **argv) {
 	clear(g);
 
 	cyclic_check();
-	
+
 	cout << "\tJoyful Coding~~\n";
 }
-

@@ -233,6 +233,7 @@ tree trimplus(tree root, int key) {
 			if (!root->left) root = root->right;
 			else root = root ->left;
 			delete (temp);
+            return temp;
 		}
 		// case 3 : if the node has two child nodes //
 		else{
